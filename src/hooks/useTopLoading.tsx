@@ -6,7 +6,7 @@ const useTopLoading = () => {
   const location = useLocation();
   const { start, complete } = useLoadingBar({
     color: "orange",
-    height: 2,
+    height: 5,
   });
 
   useEffect(() => {
