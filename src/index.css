@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  /* height: 100rem; */
+  scroll-behavior: smooth;
+}
+button {
+  border: none;
+  padding: 10px 10px;
+  border-radius: 2rem;
+  font-size: 1rem;
+  /* width: 12rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

@@ -1,0 +1,40 @@
+#hero {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  overflow: hidden;
+  position: relative;
+  /* background-color: pink; */
+  /* align-items: center; */
+
+}
+
+.hero-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+
+.hero-right:hover .border {
+  scale: 1.1;
+  opacity: 1;
+}
+
+.hero-right div {
+  border-radius: 2rem;
+  border-radius: 30% 70% 68% 32% / 41% 39% 61% 59%;
+}
+.hero-right div img {
+  /* border-radius: 2rem; */
+  border-radius: 30% 70% 68% 32% / 41% 39% 61% 59%;
+}
+
+.hero-btn {
+  width: 14rem;
+  height: 3rem;
+}
+
+

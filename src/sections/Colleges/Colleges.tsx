@@ -1,0 +1,88 @@
+import { Button } from "../../components";
+import { ArrowRight, CheckCircle } from "lucide-react";
+
+const Colleges = () => {
+  return (
+    <>
+      {/* For Colleges Section */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+            {/* Left Content */}
+            <div className="flex-1 text-center lg:text-left">
+              <div className="inline-block px-3 sm:px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6">
+                FOR COLLEGES
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+                More Placements,{" "}
+                <span className="text-blue-600">Stronger Brand</span>
+              </h2>
+              <p className="text-gray-600 text-base sm:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-8">
+                Transform your institution into a powerhouse of industry-ready
+                graduates with our comprehensive partnership program.
+              </p>
+
+              {/* Benefits List */}
+              <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+                <div className="flex items-center gap-3 justify-center lg:justify-start">
+                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0" />
+                  <span className="text-gray-700 text-base sm:text-lg">
+                    80%+ placements
+                  </span>
+                </div>
+                <div className="flex items-center gap-3 justify-center lg:justify-start">
+                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0" />
+                  <span className="text-gray-700 text-base sm:text-lg">
+                    Updated courses: AI, fintech
+                  </span>
+                </div>
+                <div className="flex items-center gap-3 justify-center lg:justify-start">
+                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0" />
+                  <span className="text-gray-700 text-base sm:text-lg">
+                    Faculty training
+                  </span>
+                </div>
+                <div className="flex items-center gap-3 justify-center lg:justify-start">
+                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0" />
+                  <span className="text-gray-700 text-base sm:text-lg">
+                    More students, funding
+                  </span>
+                </div>
+              </div>
+
+              {/* Success Story */}
+              <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg mb-6 sm:mb-8">
+                <h4 className="text-base sm:text-lg font-semibold text-blue-600 mb-2">
+                  Success Story
+                </h4>
+                <p className="text-gray-700 text-sm sm:text-base">
+                  <span className="font-semibold text-blue-600">
+                    Himalaya School:
+                  </span>{" "}
+                  Placement rate improved from 48% → 82% in just one year of
+                  partnership.
+                </p>
+              </div>
+
+              <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
+                Join Colleges
+                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+              </Button>
+            </div>
+
+            {/* Right Image */}
+            <div className="flex-1 w-full max-w-lg lg:max-w-none order-first lg:order-last">
+              <img
+                src="./images/placement.jpg"
+                alt="Students in modern classroom"
+                className="w-full h-[250px] sm:h-[300px] lg:h-[400px] object-cover rounded-2xl shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Colleges;

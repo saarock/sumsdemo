@@ -1,0 +1,48 @@
+import Hero from "./Hero/Hero";
+import Hub from "./Hub/Hub";
+import Stakeholder from "./Stakeholder/Stakeholder";
+import Colleges from "./Colleges/Colleges";
+import Companies from "./Companies/Companies";
+import Cities from "./Cities/Cities";
+import Entrepreneurship from "./Entrepreneurship/Entrepreneurship";
+import HowItWorks from "./HowItWorks/HowItWorks";
+import AssessAndAlignDetailed from "./AssessAndAlignDetailed/AssessAndAlignDetailed";
+import UpcomingEvents from "./UpcomingEvents/UpcomingEvents";
+import { PlatformShowcase } from "./PlatformShowcase/PlatformShowcase";
+import AcademiaHero from "./AcademiaHero/AcademiaHero";
+import Partner from "./Partners/Partner";
+import AcademiaInAction from "./AcademiaInAction/AcademiaInAction";
+import PartnershipBenefits from "./PartnershipBenefits/PartnershipBenefits";
+import OutcomesSection from "./OutcomesSection/OutcomesSection";
+import GrowthFlywheel from "./GrowthFlywheel/GrowthFlywheel";
+import AcademiaGrow from "./AcademiaGrow/AcademiaGrow";
+import StundetHero from "./StudentHero/StudentHero";
+import StudentVideoShowcase from "./StudentVideoShowcase/StudentVideoShowcase";
+import StudentMainFeatures from "./StudentMainFeatures/StudentMainFeatures";
+import StudentSuccessStories from "./StudentSuccessStories/StudentSuccessStories";
+
+
+export {
+  Hero,
+  Hub,
+  Stakeholder,
+  Colleges,
+  Companies,
+  Cities,
+  Entrepreneurship,
+  HowItWorks,
+  AssessAndAlignDetailed,
+  UpcomingEvents,
+  PlatformShowcase,
+  AcademiaHero,
+  Partner,
+  AcademiaInAction,
+  PartnershipBenefits,
+  OutcomesSection,
+  GrowthFlywheel,
+  AcademiaGrow,
+  StundetHero,
+  StudentVideoShowcase,
+  StudentMainFeatures,
+  StudentSuccessStories,
+};
