@@ -1,4 +1,4 @@
-import { Star } from 'lucide-react';
+import { Star } from "lucide-react";
 
 type StudentStory = {
   name: string;
@@ -14,41 +14,42 @@ type StudentStory = {
 
 const stories: StudentStory[] = [
   {
-    name: 'Biku Shrestha',
-    role: 'Software Engineer',
+    name: "Biku Shrestha",
+    role: "Software Engineer",
     message:
-      'SUMS helped me as a Software Engineering student to land my first job at a top tech company. The real projects and mentorship made all the difference.',
-    image: '/young-software-engineer.png',
-    gradientFrom: 'from-blue-50',
-    gradientTo: 'to-blue-100',
-    bgColor: 'bg-blue-200',
+      "SUMS helped me as a Software Engineering student to land my first job at a top tech company. The real projects and mentorship made all the difference.",
+
+    image: "./images/hero_right.png",
+    gradientFrom: "from-blue-50",
+    gradientTo: "to-blue-100",
+    bgColor: "bg-blue-200",
     rating: 5,
-    footer: 'Graduated 2023'
+    footer: "Graduated 2023",
   },
   {
-    name: 'Samriddhi Prajuli',
-    role: 'Data Analyst',
+    name: "Samriddhi Prajuli",
+    role: "Data Analyst",
     message:
-      'The Skill Scanner helped me discover my passion for data analysis. Now I\'m working with Fortune 500 companies analyzing market trends.',
-    image: '/professional-data-analyst.png',
-    gradientFrom: 'from-green-50',
-    gradientTo: 'to-green-100',
-    bgColor: 'bg-green-200',
+      "The Skill Scanner helped me discover my passion for data analysis. Now I'm working with Fortune 500 companies analyzing market trends.",
+    image: "./images/hero_right.png",
+    gradientFrom: "from-green-50",
+    gradientTo: "to-green-100",
+    bgColor: "bg-green-200",
     rating: 5,
-    footer: 'Career Transition 2023'
+    footer: "Career Transition 2023",
   },
   {
-    name: 'Rajiv Shrestha',
-    role: 'Marketing Manager',
+    name: "Rajiv Shrestha",
+    role: "Marketing Manager",
     message:
-      'The startup incubator program helped me launch my own marketing agency. From student entrepreneur to successful business owner!',
-    image: '/young-marketing-manager.png',
-    gradientFrom: 'from-purple-50',
-    gradientTo: 'to-purple-100',
-    bgColor: 'bg-purple-200',
+      "The startup incubator program helped me launch my own marketing agency. From student entrepreneur to successful business owner!",
+    image: "./images/hero_right.png",
+    gradientFrom: "from-purple-50",
+    gradientTo: "to-purple-100",
+    bgColor: "bg-purple-200",
     rating: 5,
-    footer: 'Startup Founder 2022'
-  }
+    footer: "Startup Founder 2022",
+  },
 ];
 
 const StudentSuccessStories = () => {
@@ -59,7 +60,8 @@ const StudentSuccessStories = () => {
           Student Success Stories
         </h2>
         <p className="text-gray-600 text-base sm:text-lg lg:text-xl leading-relaxed mb-8 sm:mb-12 max-w-4xl mx-auto">
-          Real students, real achievements, real career transformations through our platform.
+          Real students, real achievements, real career transformations through
+          our platform.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -69,24 +71,38 @@ const StudentSuccessStories = () => {
               className={`bg-gradient-to-br ${student.gradientFrom} ${student.gradientTo} rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 group`}
             >
               <div className="flex flex-col items-center text-center">
-                <div className={`w-20 h-20 ${student.bgColor} rounded-full mb-4 overflow-hidden`}>
+                <div
+                  className={`w-20 h-20 ${student.bgColor} rounded-full mb-4 overflow-hidden`}
+                >
                   <img
                     src={student.image}
                     alt={student.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{student.name}</h3>
-                <div className={`font-semibold mb-4`} style={{ color: student.gradientFrom.replace('from-', '') }}>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {student.name}
+                </h3>
+                <div
+                  className={`font-semibold mb-4`}
+                  style={{ color: student.gradientFrom.replace("from-", "") }}
+                >
                   {student.role}
                 </div>
-                <p className="text-gray-700 text-sm leading-relaxed mb-4">{student.message}</p>
+                <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                  {student.message}
+                </p>
                 <div className="flex items-center gap-1">
                   {[...Array(student.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    <Star
+                      key={i}
+                      className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                    />
                   ))}
                 </div>
-                <div className="text-xs text-gray-500 mt-2">{student.footer}</div>
+                <div className="text-xs text-gray-500 mt-2">
+                  {student.footer}
+                </div>
               </div>
             </div>
           ))}

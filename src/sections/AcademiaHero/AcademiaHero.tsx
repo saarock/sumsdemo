@@ -59,11 +59,11 @@ const AcademiaHero = () => {
           </p>
         </div>
 
-            {/* Button */}
+        {/* Button */}
         <div className="flex justify-center">
-          <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 rounded-full relative overflow-hidden group">
+          <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
             <span className="relative z-10">{heroData.buttonText}</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+            {/* <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 z-" /> */}
           </Button>
         </div>
       </div>

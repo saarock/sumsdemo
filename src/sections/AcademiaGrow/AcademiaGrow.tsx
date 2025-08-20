@@ -2,13 +2,13 @@ import { Button } from "../../components";
 
 const images = [
   {
-    src: "/professional-woman-desk-laptop.png",
+    src: "./images/hero_right.png",
     alt: "Professional working",
   },
   {
-    src: "/young-professional-office.png",
+    src: "./images/hero_right.png",
     alt: "Student learning",
-    extraClass: "sm:mt-8", // optional extra class for spacing
+    extraClass: "sm:mt-9", // optional extra class for spacing
   },
 ];
 
@@ -39,7 +39,8 @@ const AcademiaGrow = () => {
             {images.map((img, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 ${
+                className={`bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 
+                    ${
                   img.extraClass ?? ""
                 }`}
               >
@@ -47,7 +48,7 @@ const AcademiaGrow = () => {
                   <img
                     src={img.src}
                     alt={img.alt}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full object-cover`}
                   />
                 </div>
               </div>
@@ -73,9 +74,9 @@ const AcademiaGrow = () => {
               ))}
             </div>
 
-            <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 rounded-full relative overflow-hidden group">
+            <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
               <span className="relative z-10">{content.buttonText}</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              {/* <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 z-" /> */}
             </Button>
           </div>
         </div>
