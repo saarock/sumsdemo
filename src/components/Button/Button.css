@@ -1,4 +1,14 @@
+.btn {
+  border: none;
+  padding: 10px 10px;
+  border-radius: 2rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 .btn:hover {
-    transform: scale(103%);
-    transition: 0.5s ease-in-out;
+  transform: scale(103%);
+  transition: 0.5s ease-in-out;
 }

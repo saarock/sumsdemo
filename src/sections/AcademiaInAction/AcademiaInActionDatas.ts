@@ -23,22 +23,7 @@ export const videos = [
     src: "./videos/student.mp4"
 
   },
-  {
-    title: "Industry Connect",
-    description: "Partnership success stories",
-    gradient: "from-purple-500 to-pink-500",
-    buttonColor: "purple-600",
-    src: "./videos/student.mp4"
 
-  },
-  {
-    title: "Innovation Hub",
-    description: "Student startup incubation",
-    gradient: "from-teal-500 to-cyan-500",
-    buttonColor: "teal-600",
-    src: "./videos/student.mp4"
-
-  },
 ];
 
 export const stats = [

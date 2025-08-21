@@ -30,23 +30,28 @@ export const contacts = [
   {
     id: 1,
     icon: <MapPin className="w-4 h-4 mr-3 text-orange-400 flex-shrink-0" />,
-    text: "Kathmandu, Nepal",
+    text: "ANTA Complex - 3rd Floor Jawalakhel, Lalitpur, Nepal",
   },
   {
     id: 2,
-    icon: <span className="w-4 h-4 mr-3 text-orange-400 flex-shrink-0 text-center">@</span>,
-    text: "hello@sums.edu.np",
+    icon: (
+      <span className="w-4 h-4 mr-3 text-orange-400 flex-shrink-0 text-center">
+        @
+      </span>
+    ),
+    text: "Info@sumsnepal.com",
   },
   {
     id: 3,
-    icon: <span className="w-4 h-4 mr-3 text-orange-400 flex-shrink-0 text-center">📞</span>,
-    text: "+977-1-4567890",
+    icon: (
+      <span className="w-4 h-4 mr-3 text-orange-400 flex-shrink-0 text-center">
+        📞
+      </span>
+    ),
+    text: " Mobile: 9810446594 |  9865995066 9843817094  ",
   },
 ];
 
 export const policies = [
-  "Privacy Policy",
-  "Terms of Service",
-  "Cookie Policy",
-  "Accessibility",
+  "Privacy-Policy",
 ];

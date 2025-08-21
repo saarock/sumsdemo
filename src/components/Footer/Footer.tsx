@@ -122,13 +122,13 @@ const Footer = () => {
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="text-gray-400 text-sm text-center md:text-left">
-                © 2024 SUMSNEPAL. All rights reserved.
+                © {new Date().getFullYear()}. sumsnepal. All Rights Reserved.
               </div>
               <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm">
                 {policies.map((policy, idx) => (
                   <a
                     key={idx}
-                    href="#"
+                    href={policy.toLowerCase()}
                     className="text-gray-400 hover:text-orange-400 transition-colors duration-200"
                   >
                     {policy}
