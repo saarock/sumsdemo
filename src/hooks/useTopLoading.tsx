@@ -6,7 +6,7 @@ const useTopLoading = () => {
   const location = useLocation();
   const { start, complete } = useLoadingBar({
     color: "orange",
-    height: 5,
+    height: 2,
   });
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const useTopLoading = () => {
 
     const topLoadingTimer = setTimeout(() => {
       complete(); // Complete loading after 300ms
-    }, 300);
+    }, 10);
 
     return () => {
       clearTimeout(topLoadingTimer); // Cleanup timeout on unmount or route change

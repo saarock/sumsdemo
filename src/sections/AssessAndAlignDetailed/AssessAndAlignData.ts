@@ -38,5 +38,22 @@ export const assessAndAlignData = [
     icon: BookOpen,
     highlight: false,
   },
-  
+   {
+    id: 5,
+    title: "Curriculum BoosGASDGSDGter",
+    description: "Align curriculum with market needs",
+    image: "/modern-curriculum.png",
+    alt: "Curriculum development",
+    icon: BookOpen,
+    highlight: false,
+  },
+     {
+    id: 6,
+    title: "Curriculum GA,M.SDG ASDMGBoosGASDGSDGter",
+    description: "AliFASDFSDGFgn curriculum with market needs",
+    image: "/modern-curriculum.png",
+    alt: "Curriculum development",
+    icon: BookOpen,
+    highlight: false,
+  },
 ];

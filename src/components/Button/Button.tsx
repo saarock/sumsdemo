@@ -1,6 +1,6 @@
 import React from "react";
 import type { ButtonProps } from "../../types";
-
+import "./Button.css"
 
 const Button: React.FC<ButtonProps> = ({
   variant,

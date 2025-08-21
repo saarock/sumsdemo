@@ -1,2 +1,3 @@
 import useTopLoading from "./useTopLoading";
-export {useTopLoading}
+import useBackToTop from "./useBackToTop";
+export {useTopLoading, useBackToTop}

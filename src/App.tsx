@@ -1,8 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./Layout";
 import { Academia, Home, Student } from "./pages";
+import { useBackToTop } from "./hooks";
 
 const App = () => {
+  useBackToTop()
   return (
     <>
       <BrowserRouter>
