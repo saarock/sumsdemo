@@ -79,9 +79,7 @@ const AssessAndAlignDetailed = () => {
               return (
                 <div
                   key={service.id}
-                  className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:transform hover:scale-105 ${
-                    "border border-gray-100"
-                  }`}
+                  className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:transform hover:scale-105 ${"border border-gray-100"}`}
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-6 h-6 text-white" />

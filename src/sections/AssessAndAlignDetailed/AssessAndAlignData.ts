@@ -18,7 +18,7 @@ export const assessAndAlignData = [
     image: "./images/hero_right.png",
     alt: "Project collaboration",
     icon: Lightbulb,
-    highlight: true, // 🔥 Highlighted card
+    highlight: true, 
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ export const assessAndAlignData = [
     icon: BookOpen,
     highlight: false,
   },
-   {
+  {
     id: 5,
     title: "Curriculum BoosGASDGSDGter",
     description: "Align curriculum with market needs",
@@ -47,7 +47,7 @@ export const assessAndAlignData = [
     icon: BookOpen,
     highlight: false,
   },
-     {
+  {
     id: 6,
     title: "Curriculum GA,M.SDG ASDMGBoosGASDGSDGter",
     description: "AliFASDFSDGFgn curriculum with market needs",
