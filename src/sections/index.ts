@@ -20,7 +20,11 @@ import StundetHero from "./StudentHero/StudentHero";
 import StudentVideoShowcase from "./StudentVideoShowcase/StudentVideoShowcase";
 import StudentMainFeatures from "./StudentMainFeatures/StudentMainFeatures";
 import StudentSuccessStories from "./StudentSuccessStories/StudentSuccessStories";
-
+import BusniessHeroSection from "./BusniessHeroSection/BusniessHeroSection";
+import WhoCanJoin from "./WhoCanJoin/WhoCanJoin";
+import HowWeSupport from "./HowWeSupport/HowWeSupport";
+import OurProcess from "./OurProcess/OurProcess";
+import PostYourOffer from "./PostYourOffer/PostYourOffer";
 
 export {
   Hero,
@@ -45,4 +49,9 @@ export {
   StudentVideoShowcase,
   StudentMainFeatures,
   StudentSuccessStories,
+  BusniessHeroSection,
+  WhoCanJoin,
+  HowWeSupport,
+  OurProcess,
+  PostYourOffer,
 };

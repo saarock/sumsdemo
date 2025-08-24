@@ -10,6 +10,11 @@ const useTopLoading = () => {
   });
 
   useEffect(() => {
+    function scrollTop() {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+
+    scrollTop();
     start(); // Start loading
 
     const topLoadingTimer = setTimeout(() => {
