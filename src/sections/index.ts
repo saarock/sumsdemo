@@ -25,6 +25,10 @@ import WhoCanJoin from "./WhoCanJoin/WhoCanJoin";
 import HowWeSupport from "./HowWeSupport/HowWeSupport";
 import OurProcess from "./OurProcess/OurProcess";
 import PostYourOffer from "./PostYourOffer/PostYourOffer";
+import CTASection from "./CTASection/CTASection";
+import EntrepreneurshipHero from "./EntrepreneurshipHero/EntrepreneurshipHero";
+import UltimateLaunchpad from "./UltimateLaunchpad/UltimateLaunchpad";
+import StartupIdeaGenerator from "./StartupIdeaGenerator/StartupIdeaGenerator";
 
 export {
   Hero,
@@ -54,4 +58,8 @@ export {
   HowWeSupport,
   OurProcess,
   PostYourOffer,
+  CTASection,
+  EntrepreneurshipHero,
+  UltimateLaunchpad,
+  StartupIdeaGenerator,
 };

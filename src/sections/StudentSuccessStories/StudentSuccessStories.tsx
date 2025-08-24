@@ -1,4 +1,5 @@
-import { Star } from "lucide-react";
+import { ArrowRight, Rocket, Star } from "lucide-react";
+import { Button } from "../../components";
 
 type StudentStory = {
   name: string;
@@ -107,6 +108,21 @@ const StudentSuccessStories = () => {
             </div>
           ))}
         </div>
+         <div className="mt-8 max-w-2xl mx-auto">
+            <div className="bg-primary rounded-2xl p-8 text-center text-primary-foreground">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Rocket className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Join Our Success Stories</h3>
+              <p className="mb-6 opacity-90">
+                Ready to be the next startup success? Join our acceleration program today.
+              </p>
+                <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 w-full">
+                  Apply Now
+                  <ArrowRight className="w-4 h-4 ml-2" /> 
+                </Button>
+            </div>
+          </div>
       </div>
     </section>
   );
