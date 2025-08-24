@@ -29,7 +29,11 @@ import CTASection from "./CTASection/CTASection";
 import EntrepreneurshipHero from "./EntrepreneurshipHero/EntrepreneurshipHero";
 import UltimateLaunchpad from "./UltimateLaunchpad/UltimateLaunchpad";
 import StartupIdeaGenerator from "./StartupIdeaGenerator/StartupIdeaGenerator";
-
+import ProjectHero from "./ProjectHero/ProjectHero";
+import FeatureCards from "./FeatureCards/FeatureCards";
+import FilterAndSearchProjects from "./FilterAndSearchProjects/FilterAndSearchProjects";
+import InnovationMetrics from "./InnovationMetrics/InnovationMetrics";
+import Projects from "./Projects/Projects";
 export {
   Hero,
   Hub,
@@ -62,4 +66,9 @@ export {
   EntrepreneurshipHero,
   UltimateLaunchpad,
   StartupIdeaGenerator,
+  ProjectHero,
+  FeatureCards,
+  FilterAndSearchProjects,
+  InnovationMetrics,
+  Projects,
 };

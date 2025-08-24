@@ -5,5 +5,6 @@ import PrivacyAndPolicies from "./PrivacyAndPolicies/PrivacyAndPolicies";
 import NotFoundPage from "./NotFound404/NotFound404";
 import Business from "./Business/Business";
 import Entrepreneurship from "./Entrepreneurship/Entrepreneurship";
+import ProjectGallery from "./Project/ProjectGallery";
 
-export { Home, Academia, Student, PrivacyAndPolicies, NotFoundPage, Business, Entrepreneurship };
+export { Home, Academia, Student, PrivacyAndPolicies, ProjectGallery,NotFoundPage, Business, Entrepreneurship };
