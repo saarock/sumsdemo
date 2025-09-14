@@ -4,7 +4,8 @@ import "./index.css";
 import App from "./App.tsx";
 import { LoadingBarContainer } from "react-top-loading-bar";
 
-createRoot(document.getElementById("root")!).render(
+const rootElement = document.getElementById("root");
+createRoot(rootElement!).render(
   <StrictMode>
     <LoadingBarContainer>
       <App />

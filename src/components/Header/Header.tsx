@@ -8,15 +8,13 @@ import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <header className="flex items-center justify-between px-6 py-4 bg-white border-b border-gray-100 sticky top-0 z-50">
-
       <div className="flex items-center">
-        <LogoImage makeClickable={true}/>
+        <LogoImage makeClickable={true} />
       </div>
 
       {/* Desktop Nav */}
@@ -45,7 +43,10 @@ const Header = () => {
 
       {/* Mobile Menu Button */}
       <div className="md:hidden">
-        <button onClick={toggleMenu} className="text-gray-600 hover:text-gray-900">
+        <button
+          onClick={toggleMenu}
+          className="text-gray-600 hover:text-gray-900"
+        >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
