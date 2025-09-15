@@ -12,9 +12,9 @@ const Stakeholder = () => {
             return (
               <div
                 key={item.id}
-                className="text-center group hover:transform hover:scale-105 transition-all duration-300"
+                className="text-center group hover:transform hover:scale-105 transition-all duration-30"
               >
-                <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 h-64">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:rotate-6 transition-transform duration-300">
                     <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                   </div>

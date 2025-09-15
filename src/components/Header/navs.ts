@@ -5,5 +5,6 @@ export const navs = [
   { name: "Business", path: "/business", id: "business" },
   { name: "Entrepreneurship", path: "/entrepreneurship", id: "entrepreneurship" },
   { name: "Project", path: "/project", id: "project" },
+  { name: "Events", path: "/event", id: "event" },
 
 ];

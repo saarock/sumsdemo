@@ -1,4 +1,17 @@
+import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
+
 function NotFoundPage() {
+
+  const navigate = useNavigate();
+
+  const redirectToTheHomePage = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    navigate("/");
+  }, []);
+
+
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
       <h1 className="text-6xl font-bold text-gray-800 mb-4">404</h1>
@@ -10,6 +23,7 @@ function NotFoundPage() {
       </p>
       <a
         href="/"
+        onClick={redirectToTheHomePage}
         className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
       >
         Back to Home
