@@ -18,19 +18,19 @@ export default function Hero() {
             <span className="text-orange-500">Discovering</span> Future"
           </h1>
           <p className="text-gray-600 text-base sm:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-8 max-w-lg mx-auto lg:mx-0">
-            Students need jobs. Employers need skills. Cities helped connects
-            education to real jobs and city.
+            Be part of SUMS in shaping future-ready talent and fostering an
+            innovation-driven community. Through our skills-based digital
+            platform and collaborative ecosystem, we empower learners, academia,
+            and industry to solve real-world challenges and create lasting
+            impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
             <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
-              Get Started
+              Get In Touch
               <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 z-" />
+            </Button>
 
-            </Button>
-           
-            <Button className="border-2 border-orange-500 text-orange-500 hover:bg-orange-50 px-6 sm:px-8 py-3 text-base sm:text-lg transition-all duration-200 bg-transparent w-full sm:w-auto">
-              Learn More
-            </Button>
+         
           </div>
         </div>
 

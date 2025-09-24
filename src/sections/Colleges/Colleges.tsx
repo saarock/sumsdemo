@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../../components";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
@@ -27,31 +28,31 @@ const Colleges = () => {
                 <div className="flex items-center gap-3 justify-center lg:justify-start">
                   <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0" />
                   <span className="text-gray-700 text-base sm:text-lg">
-                    80%+ placements
+                    Industry-linked internships & live projects
                   </span>
                 </div>
                 <div className="flex items-center gap-3 justify-center lg:justify-start">
                   <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0" />
                   <span className="text-gray-700 text-base sm:text-lg">
-                    Updated courses: AI, fintech
+                    Future-ready Flexible  courses
                   </span>
                 </div>
                 <div className="flex items-center gap-3 justify-center lg:justify-start">
                   <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0" />
                   <span className="text-gray-700 text-base sm:text-lg">
-                    Faculty training
+                    Faculty development & global exposure
                   </span>
                 </div>
                 <div className="flex items-center gap-3 justify-center lg:justify-start">
                   <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0" />
                   <span className="text-gray-700 text-base sm:text-lg">
-                    More students, funding
+                   prepare career-ready students for employment, entrepreneurship, and further studies.
                   </span>
                 </div>
               </div>
 
               {/* Success Story */}
-              <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg mb-6 sm:mb-8">
+              {/* <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg mb-6 sm:mb-8">
                 <h4 className="text-base sm:text-lg font-semibold text-blue-600 mb-2">
                   Success Story
                 </h4>
@@ -62,12 +63,14 @@ const Colleges = () => {
                   Placement rate improved from 48% → 82% in just one year of
                   partnership.
                 </p>
-              </div>
+              </div> */}
 
+             <Link to={"/academia"}>
               <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
-                Join Colleges
+               Explore now
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
               </Button>
+             </Link>
             </div>
 
             {/* Right Image */}

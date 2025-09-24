@@ -11,12 +11,14 @@ import {
   UpcomingEvents,
   PlatformShowcase,
 } from "../../sections";
+import Innovation from "../../sections/Innovation/Innovation";
 
 const Home = () => {
   return (
     <>
       <main>
         <Hero />
+        <Innovation/>
         <Hub />
         <Stakeholder />
         <Colleges />
