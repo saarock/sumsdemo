@@ -1,5 +1,5 @@
 import { Calendar, CheckCircle, Rocket, Users } from 'lucide-react'
-import React from 'react'
+
 
 const InnovationMetrics = () => {
   return (
