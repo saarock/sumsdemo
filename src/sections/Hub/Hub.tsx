@@ -7,8 +7,7 @@ const Hub = () => {
           <span className="text-orange-500">Innovation</span>
         </h2>
         <p className="text-gray-600 text-base sm:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto">
-          SUMS empowers to create opportunity to every stakeholder through
-          innovative connections and real-world solutions.
+         Empowering learners, academia, and industry with real-world innovation.
         </p>
       </div>
     </section>
