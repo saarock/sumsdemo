@@ -7,6 +7,12 @@ const Innovation = () => {
     <>
       {/* For Companies Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+       <div className="flex justify-center">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+           🇫🇮 Finnish <span className="text-orange-500">Innovation</span> at Our{" "}
+          <span className="text-orange-500"> Core</span>
+        </h2>
+       </div>
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
             {/* Left Image */}
@@ -20,11 +26,6 @@ const Innovation = () => {
 
             {/* Right Content */}
             <div className="flex-1 text-center lg:text-left">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-                <span className="text-green-600">
-                  🇫🇮 Finnish Innovation at Our Core
-                </span>
-              </h2>
               <p className="text-gray-600 text-base sm:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-8">
                 Experience the power of Finnish education with our interactive
                 learning ecosystem. Co-developed with Finnish experts, our
@@ -56,14 +57,14 @@ const Innovation = () => {
               </div>
 
               {/* Success Story */}
-              <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg mb-6 sm:mb-8">
+              {/* <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg mb-6 sm:mb-8">
                 <p className="text-gray-700 text-sm sm:text-base">
                   <span className="font-semibold text-green-600">eCommX:</span>{" "}
                   We empower learners to develop essential skills for career
                   advancement and entrepreneurship, equipping them for success
                   in today's dynamic world.
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

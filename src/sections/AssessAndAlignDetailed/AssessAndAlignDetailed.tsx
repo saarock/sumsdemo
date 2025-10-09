@@ -1,11 +1,14 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "../../components";
 import { assessAndAlignData } from "./AssessAndAlignData";
+import { useHowItWorks } from "../../context/HowItWorksContext";
 
 const ITEMS_PER_PAGE = 4; // show 4 cards per slide
 
 const AssessAndAlignDetailed = () => {
+    const { currentStateNum } = useHowItWorks();
+  
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Get the current slice of data
@@ -27,7 +30,7 @@ const AssessAndAlignDetailed = () => {
       setCurrentIndex(currentIndex + ITEMS_PER_PAGE);
     }
   }, [currentIndex]);
-
+ 
   return (
     <>
       {/* Assess & Align Detailed Section */}
