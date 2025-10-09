@@ -17,7 +17,7 @@ const Partner = () => {
             {[...partners, ...partners].map((partner, index) => (
               <div
                 key={index}
-                className="flex-shrink-0"
+                className="flex-shrink-0 m-7"
               >
                 <img
                   src={`/images/logos/${partner}`}
