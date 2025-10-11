@@ -45,17 +45,18 @@ const HowItWorks = () => {
           {/* Process Flow */}
           <div className="relative">
             {/* Horizontal Line (Desktop) */}
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gray-200 transform -translate-y-1/2 z-0">
+            <div className="hidden lg:block absolute left-0 right-0 h-1.5 bg-gray-200 transform -translate-y-1/2 z-0 top-12">
               <div
-                className="bg-gradient-to-br from-orange-500 to-orange-600"
+                className="bg-gradient-to-br from-orange-600 to-orange-500 h-1.5 top-0 left-0"
+
                 style={{
                   position: "absolute",
                   borderRadius: "3rem",
-                  height: "2px",
+            
 
                   width:
                     currentStateNum === 1
-                      ? "20%"
+                      ? "25%"
                       : currentStateNum === 2
                       ? "50%" // Define the width for when currentStateNum is 2
                       : currentStateNum === 3
@@ -70,7 +71,7 @@ const HowItWorks = () => {
             </div>
 
             {/* Vertical Accent Line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-blue-300 to-transparent transform -translate-x-1/2 z-10 opacity-50"></div>
+            {/* <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-blue-300 to-transparent transform -translate-x-1/2 z-10 opacity-50"></div> */}
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 relative z-20">
               {stepsData.map((step, index) => {
@@ -83,6 +84,11 @@ const HowItWorks = () => {
                   >
                     <div className="relative mb-4 sm:mb-6">
                       <div
+                        style={{
+                          zIndex: "9999",
+                          backgroundColor: "white",
+                       
+                        }}
                         className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 ${`${
                           index + 1 <= currentStateNum &&
                           "bg-gradient-to-br from-orange-500 to-orange-600"

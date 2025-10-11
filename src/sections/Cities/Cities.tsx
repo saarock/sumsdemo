@@ -1,10 +1,20 @@
-import { Button } from '../../components'
-import { ArrowRight, CheckCircle } from 'lucide-react'
+import { Button } from '../../components';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 
 const Cities = () => {
+  const benefits = [
+    "Traffic, waste, governance solutions",
+    "Youth solve real issues",
+    "Cost-effective pilots",
+    "Culture of innovation & entrepreneurship",
+    "Local talent for local jobs",
+    "Increased employment & sustainable growth",
+    "Skilled graduates for emerging industries"
+  ];
+
   return (
     <>
-    {/* For Cities Section */}
+      {/* For Cities Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-r from-purple-50 to-violet-50">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
@@ -22,30 +32,18 @@ const Cities = () => {
                 traditional consulting costs.
               </p>
 
-              {/* Benefits List */}
+              {/* Dynamic Benefits List */}
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-                <div className="flex items-center gap-3 justify-center lg:justify-start">
-                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-purple-500 flex-shrink-0" />
-                  <span className="text-gray-700 text-base sm:text-lg">
-                    Traffic, waste, governance
-                  </span>
-                </div>
-                <div className="flex items-center gap-3 justify-center lg:justify-start">
-                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-purple-500 flex-shrink-0" />
-                  <span className="text-gray-700 text-base sm:text-lg">
-                    Youth solve real issues
-                  </span>
-                </div>
-                <div className="flex items-center gap-3 justify-center lg:justify-start">
-                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-purple-500 flex-shrink-0" />
-                  <span className="text-gray-700 text-base sm:text-lg">
-                    Cost-effective pilots
-                  </span>
-                </div>
+                {benefits.map((benefit, index) => (
+                  <div className="flex items-center gap-3 justify-center lg:justify-start" key={index}>
+                    <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-purple-500 flex-shrink-0" />
+                    <span className="text-gray-700 text-base sm:text-lg">{benefit}</span>
+                  </div>
+                ))}
               </div>
 
               {/* Success Story */}
-              <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg mb-6 sm:mb-8">
+              {/* <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg mb-6 sm:mb-8">
                 <h4 className="text-base sm:text-lg font-semibold text-purple-600 mb-2">
                   Success Story
                 </h4>
@@ -56,8 +54,9 @@ const Cities = () => {
                   Student-developed traffic management system reduced congestion
                   by 15% in pilot areas.
                 </p>
-              </div>
+              </div> */}
 
+              {/* Build Your City Button */}
               <Button className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
                 Build Your City
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
@@ -75,9 +74,8 @@ const Cities = () => {
           </div>
         </div>
       </section>
-
     </>
-  )
-}
+  );
+};
 
-export default Cities
+export default Cities;

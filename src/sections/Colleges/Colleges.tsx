@@ -3,6 +3,14 @@ import { Button } from "../../components";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 const Colleges = () => {
+  const benefits = [
+    "Industry-linked internships & live projects",
+    "Future-ready Flexible courses",
+    "Faculty development & global exposure",
+    "Enhanced student enrollment & institutional growth",
+    "Prepare career-ready students for employment, entrepreneurship, and further studies."
+  ];
+
   return (
     <>
       {/* For Colleges Section */}
@@ -16,67 +24,36 @@ const Colleges = () => {
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
                 More Placements,{" "}
-                <span className="text-blue-600">Stronger Brand</span>
+                <span className="text-blue-600">Stronger Reputation</span>
               </h2>
               <p className="text-gray-600 text-base sm:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-8">
                 Transform your institution into a powerhouse of industry-ready
                 graduates with our comprehensive partnership program.
               </p>
 
-              {/* Benefits List */}
+              {/* Dynamic Benefits List */}
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-                <div className="flex items-center gap-3 justify-center lg:justify-start">
-                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700 text-base sm:text-lg">
-                    Industry-linked internships & live projects
-                  </span>
-                </div>
-                <div className="flex items-center gap-3 justify-center lg:justify-start">
-                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700 text-base sm:text-lg">
-                    Future-ready Flexible  courses
-                  </span>
-                </div>
-                <div className="flex items-center gap-3 justify-center lg:justify-start">
-                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700 text-base sm:text-lg">
-                    Faculty development & global exposure
-                  </span>
-                </div>
-                <div className="flex items-center gap-3 justify-center lg:justify-start">
-                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0" />
-                  <span className="text-gray-700 text-base sm:text-lg">
-                   prepare career-ready students for employment, entrepreneurship, and further studies.
-                  </span>
-                </div>
+                {benefits.map((benefit, index) => (
+                  <div className="flex items-center gap-3 justify-center lg:justify-start" key={index}>
+                    <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700 text-base sm:text-lg">{benefit}</span>
+                  </div>
+                ))}
               </div>
 
-              {/* Success Story */}
-              {/* <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg mb-6 sm:mb-8">
-                <h4 className="text-base sm:text-lg font-semibold text-blue-600 mb-2">
-                  Success Story
-                </h4>
-                <p className="text-gray-700 text-sm sm:text-base">
-                  <span className="font-semibold text-blue-600">
-                    Himalaya School:
-                  </span>{" "}
-                  Placement rate improved from 48% → 82% in just one year of
-                  partnership.
-                </p>
-              </div> */}
-
-             <Link to={"/academia"}>
-              <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
-               Explore now
-                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
-              </Button>
-             </Link>
+              {/* Explore Button */}
+              <Link to={"/academia"}>
+                <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
+                  Explore now
+                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+                </Button>
+              </Link>
             </div>
 
             {/* Right Image */}
             <div className="flex-1 w-full max-w-lg lg:max-w-none order-first lg:order-last">
               <img
-                src="./images/placement.jpg"
+                src="./images/colleges.jpg"
                 alt="Students in modern classroom"
                 className="w-full h-[250px] sm:h-[300px] lg:h-[400px] object-cover rounded-2xl shadow-2xl"
               />

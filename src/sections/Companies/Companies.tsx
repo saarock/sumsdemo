@@ -11,7 +11,7 @@ const Companies = () => {
             {/* Left Image */}
             <div className="flex-1 w-full max-w-lg lg:max-w-none">
               <img
-                src="./images/team_coll.jpg"
+                src="./images/companies.jpg"
                 alt="Team collaborating in office"
                 className="w-full h-[250px] sm:h-[300px] lg:h-[400px] object-cover rounded-2xl shadow-2xl"
               />
@@ -54,7 +54,7 @@ const Companies = () => {
               </div>
 
               {/* Success Story */}
-              <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg mb-6 sm:mb-8">
+              {/* <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg mb-6 sm:mb-8">
                 <h4 className="text-base sm:text-lg font-semibold text-green-600 mb-2">
                   Success Story
                 </h4>
@@ -63,7 +63,7 @@ const Companies = () => {
                   Reduced hiring time from 45 → 12 days while finding
                   better-qualified candidates.
                 </p>
-              </div>
+              </div> */}
 
               <Button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
 
