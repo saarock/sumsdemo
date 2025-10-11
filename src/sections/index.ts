@@ -18,7 +18,7 @@ import GrowthFlywheel from "./GrowthFlywheel/GrowthFlywheel";
 import AcademiaGrow from "./AcademiaGrow/AcademiaGrow";
 import StundetHero from "./StudentHero/StudentHero";
 import StudentVideoShowcase from "./StudentVideoShowcase/StudentVideoShowcase";
-import StudentMainFeatures from "./StudentMainFeatures/StudentMainFeatures";
+
 import StudentSuccessStories from "./StudentSuccessStories/StudentSuccessStories";
 import BusniessHeroSection from "./BusniessHeroSection/BusniessHeroSection";
 import WhoCanJoin from "./WhoCanJoin/WhoCanJoin";
@@ -55,7 +55,7 @@ export {
   AcademiaGrow,
   StundetHero,
   StudentVideoShowcase,
-  StudentMainFeatures,
+
   StudentSuccessStories,
   BusniessHeroSection,
   WhoCanJoin,
