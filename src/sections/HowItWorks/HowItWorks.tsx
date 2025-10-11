@@ -95,7 +95,7 @@ const HowItWorks = () => {
                         }`}`}
                       >
                         <Icon
-                          className={`w-8 h-8 sm:w-10 sm:h-10 transition-colors duration-300 ${
+                          className={`w-8 h-8 sm:w-10 sm:h-10   ${
                             index + 1 <= currentStateNum
                               ? "text-white"
                               : "text-gray-600 "
