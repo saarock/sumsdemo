@@ -6,7 +6,7 @@ import { Button } from "../../components";
 const HeroSection = () => {
   return (
     <section
-      className="relative flex flex-col lg:flex-row items-center min-h-[500px] lg:min-h-[650px] px-4 sm:px-6 py-8 lg:py-0 bg-center bg-no-repeat bg-cover justify-center"
+      className="relative flex flex-col lg:flex-row items-center  min-h-[500px] lg:min-h-[650px] px-4 sm:px-6 py-8 lg:py-0 bg-center bg-no-repeat bg-cover justify-center"
       style={{ backgroundImage: `url(/images/hero_right.png)` }}
     >
       {/* Dark Overlay */}
@@ -41,11 +41,11 @@ const HeroSection = () => {
       <div className="flex-1 w-full max-w-lg lg:max-w-[600px] mx-auto lg:mx-0 relative z-10">
         <div className="relative rounded-2xl shadow-2xl overflow-hidden">
           {/* Base Image */}
-          <img
+          {/* <img
             src="/images/hero_left.png"
             alt="Education ecosystem"
             className="w-full h-[300px] sm:h-[400px] lg:h-[600px] object-cover transition-transform duration-500 hover:scale-105"
-          />
+          /> */}
 
           {/* Overlay Collaboration Card */}
           {/* <div className="absolute bottom-6 left-6 bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border border-white/30 max-w-[280px]">

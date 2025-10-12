@@ -17,7 +17,7 @@ const heroData = {
   highlight:
     "🇳🇵 Nepal-Focused Design — specifically developed to align with operational realities and accreditation requirements of Nepali institutions.",
   buttonText: "Get In Touch",
-  backgroundImage: "/images/hero_right.png",
+  backgroundImage: "/images/aca.JPG",
 };
 
 export default function AcademiaHero() {
@@ -75,11 +75,11 @@ export default function AcademiaHero() {
       <div className="flex-1 w-full max-w-lg lg:max-w-[600px] mx-auto lg:mx-0 relative z-10">
         <div className="relative rounded-2xl shadow-2xl overflow-hidden">
           {/* Base Image */}
-          <img
+          {/* <img
             src="/images/hero_left.png"
             alt="Education ecosystem"
             className="w-full h-[300px] sm:h-[400px] lg:h-[600px] object-cover transition-transform duration-500 hover:scale-105"
-          />
+          /> */}
         </div>
       </div>
     </section>

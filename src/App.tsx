@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./Layout";
-import { Academia, Business, Entrepreneurship, Home, NotFoundPage, PrivacyAndPolicies, ProjectGallery, Student } from "./pages";
+import { Academia, Business, City, Entrepreneurship, Home, NotFoundPage, PrivacyAndPolicies, ProjectGallery, Student } from "./pages";
 import { useBackToTop } from "./hooks";
 
 const App = () => {
@@ -18,6 +18,7 @@ const App = () => {
             <Route path="/entrepreneurship" element={<Entrepreneurship/>} />
             <Route path="/project" element={<ProjectGallery/>} />
             <Route path="*" element={<NotFoundPage/>} />
+            <Route path="/city" element={<City/>} />
           </Route>
         </Routes>
       </BrowserRouter>

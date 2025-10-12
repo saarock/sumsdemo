@@ -8,7 +8,7 @@ const EntrepreneurshipHero = () => {
       {/* Entrepreneurship Hero Section */}
       <section
         className="relative flex flex-col lg:flex-row items-center justify-center min-h-[500px] lg:min-h-[650px] px-4 sm:px-6 py-8 lg:py-0 bg-center bg-no-repeat bg-cover"
-              style={{ backgroundImage: `url(/images/hero_right.png)` }}
+              style={{ backgroundImage: `url(/images/ent.JPG)` }}
 
       >
         {/* Dark Overlay */}
@@ -45,7 +45,7 @@ const EntrepreneurshipHero = () => {
           <div className="relative rounded-2xl shadow-2xl overflow-hidden">
             {/* Base Image */}
             <img
-              src="/modern-startup-office-with-rocket-launch-imagery.png"
+              src="/images/ent2.JPG"
               alt="Startup journey with rocket launch"
               className="w-full h-[300px] sm:h-[400px] lg:h-[600px] object-cover transition-transform duration-500 hover:scale-105"
             />

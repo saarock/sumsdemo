@@ -10,7 +10,7 @@ const BusinessHeroSection = () => {
         flex-col lg:flex-row items-center min-h-[500px] 
         lg:min-h-[650px] px-4 sm:px-6 py-8 lg:py-0 bg-center 
         bg-no-repeat bg-cover justify-center"
-        style={{ backgroundImage: `url(/images/hero_right.png)` }}
+        style={{ backgroundImage: `url(/images/business.jpg)` }}
       >
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/60 backdrop-blur-xs"></div>
@@ -30,8 +30,8 @@ const BusinessHeroSection = () => {
           </h1>
 
           <p className="text-gray-100 text-base sm:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-8 max-w-lg mx-auto lg:mx-0 drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">
-            SUMS Nepal invites organizations—private companies, NGOs, social
-            enterprises, industry associations—to collaborate and build
+            SUMS Nepal invites organizations private companies, NGOs, social
+            enterprises, industry associations to collaborate and build
             workforce innovation together.
           </p>
 
@@ -47,7 +47,7 @@ const BusinessHeroSection = () => {
           <div className="relative rounded-2xl shadow-2xl overflow-hidden">
             {/* Base Image */}
             <img
-              src="/images/hero_right.png"
+              src="/images/business_right.JPG"
               alt="Business ecosystem collaboration"
               className="w-full h-[300px] sm:h-[400px] lg:h-[600px] object-cover transition-transform duration-500 hover:scale-105"
             />

@@ -5,7 +5,7 @@ const StudentHero = () => {
   return (
     <section
       className="relative flex flex-col lg:flex-row items-center justify-center min-h-[500px] lg:min-h-[650px] px-4 sm:px-6 py-8 lg:py-0 bg-center bg-no-repeat bg-cover"
-      style={{ backgroundImage: `url(/images/hero_right.png)` }}
+      style={{ backgroundImage: `url(/images/student_learning.JPG)` }}
     >
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/60 backdrop-blur-xs"></div>
@@ -38,11 +38,11 @@ const StudentHero = () => {
       <div className="flex-1 w-full max-w-lg lg:max-w-[600px] mx-auto lg:mx-0 relative z-10">
         <div className="relative rounded-2xl shadow-2xl overflow-hidden">
           {/* Base Image */}
-          <img
+          {/* <img
             src="/images/hero_left.png"
             alt="Career Launch"
             className="w-full h-[300px] sm:h-[400px] lg:h-[600px] object-cover transition-transform duration-500 hover:scale-105"
-          />
+          /> */}
         </div>
       </div>
     </section>
