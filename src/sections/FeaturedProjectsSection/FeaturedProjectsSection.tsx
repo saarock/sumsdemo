@@ -7,18 +7,18 @@ const projects = [
     title: "Smart Waste & Mobility",
     description:
       "Develop smart traffic infrastructure and intelligent traffic management applications for efficient urban navigation.",
-    image: "/modern-glass-office-buildings-urban-architecture.jpg",
+    image: "images/modern-glass-office-buildings-urban-architecture.jpg",
   },
   {
     title: "Green Energy Initiative",
     description:
       "Implement renewable energy solutions and smart grid technology to create sustainable urban environments.",
-    image: "/solar-panels-green-energy-sustainable-city.jpg",
+    image: "images/solar-panels-green-energy-sustainable-city.jpg",
   },
   {
     title: "Digital Healthcare Hub",
     description: "Build connected healthcare infrastructure with telemedicine and AI-powered diagnostic systems.",
-    image: "/modern-hospital-healthcare-technology.jpg",
+    image: "images/modern-hospital-healthcare-technology.jpg",
   },
 ]
 
@@ -34,7 +34,7 @@ export function FeaturedProjectsSection() {
           <div className="bg-white rounded-lg overflow-hidden shadow-sm">
             <div className="relative h-64">
               <img
-                src={projects[activeIndex].image || "/placeholder.svg"}
+                src={projects[activeIndex].image || "images/placeholder.svg"}
                 alt={projects[activeIndex].title}
                 // fill
                 className="object-cover"

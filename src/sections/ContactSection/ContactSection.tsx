@@ -1,9 +1,6 @@
 "use client";
 
-import type React from "react";
-
-import { useState } from "react";
-
+import React, { useState } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "../../components";
 
@@ -20,12 +17,13 @@ export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("[v0] Form submitted:", formData);
-    // Handle form submission
+    alert("Form submitted! We'll contact you soon.");
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
+        {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-3">
             Let's Build Your City's Future
@@ -37,106 +35,105 @@ export function ContactSection() {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <input
-                  placeholder="Name"
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                  required
-                />
-              </div>
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-6 bg-white p-8 rounded-2xl shadow-lg"
+          >
+            <input
+              type="text"
+              placeholder="Name"
+              value={formData.name}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
+              required
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 outline-none"
+            />
 
-              <div>
-                {/* <select value={formData.role} onChange={(value:string) => setFormData({ ...formData, role: value })}> */}
-                {/* <SelectTri>
-                    <SelectValue placeholder="Select your role" />
-                  </SelectTri>
-                  <SelectContent>
-                    <SelectItem value="city-leader">City Leader</SelectItem>
-                    <SelectItem value="innovator">Innovator</SelectItem>
-                    <SelectItem value="citizen">Citizen</SelectItem>
-                    <SelectItem value="business">Business Owner</SelectItem>
-                  </SelectContent> */}
-                {/* </select> */}
-              </div>
+            <select
+              value={formData.role}
+              onChange={(e) =>
+                setFormData({ ...formData, role: e.target.value })
+              }
+              required
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 outline-none"
+            >
+              <option value="" disabled>
+                Select your role
+              </option>
+              <option value="city-leader">City Leader</option>
+              <option value="innovator">Innovator</option>
+              <option value="citizen">Citizen</option>
+              <option value="business">Business Owner</option>
+            </select>
 
-              <div>
-                <input
-                  placeholder="City"
-                  value={formData.city}
-                  onChange={(e) =>
-                    setFormData({ ...formData, city: e.target.value })
-                  }
-                  required
-                />
-              </div>
+            <input
+              type="text"
+              placeholder="City"
+              value={formData.city}
+              onChange={(e) =>
+                setFormData({ ...formData, city: e.target.value })
+              }
+              required
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 outline-none"
+            />
 
-              <div>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                  required
-                />
-              </div>
+            <input
+              type="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
+              required
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 outline-none"
+            />
 
-              <div>
-                <select
-                  value={formData.partnerInterest}
-                  onChange={(value: any) =>
-                    setFormData({ ...formData, partnerInterest: value })
-                  }
-                >
-                  {/* <SelectTrigger>
-                    <SelectValue placeholder="Select project type" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="smart-mobility">Smart Mobility</SelectItem>
-                    <SelectItem value="green-energy">Green Energy</SelectItem>
-                    <SelectItem value="digital-health">Digital Healthcare</SelectItem>
-                    <SelectItem value="education">Education & Skills</SelectItem>
-                  </SelectContent> */}
-                </select>
-              </div>
+            <select
+              value={formData.partnerInterest}
+              onChange={(e) =>
+                setFormData({ ...formData, partnerInterest: e.target.value })
+              }
+              required
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 outline-none"
+            >
+              <option value="" disabled>
+                Select project type
+              </option>
+              <option value="smart-mobility">Smart Mobility</option>
+              <option value="green-energy">Green Energy</option>
+              <option value="digital-health">Digital Healthcare</option>
+              <option value="education">Education & Skills</option>
+            </select>
 
-              <div>
-                <textarea
-                  placeholder="Tell us about your city..."
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
-                  rows={4}
-                  required
-                />
-              </div>
+            <textarea
+              placeholder="Tell us about your city..."
+              value={formData.message}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
+              rows={5}
+              required
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 outline-none resize-none"
+            />
 
-              <Button
-                type="submit"
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white"
-              >
-                Submit & Schedule a Call
-              </Button>
+            <Button
+              type="submit"
+              className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 font-semibold rounded-lg transition-all"
+            >
+              Submit & Schedule a Call
+            </Button>
 
-              <p className="text-sm text-gray-500 text-center">
-                We'll reply within 24h
-              </p>
-            </form>
-          </div>
+            <p className="text-sm text-gray-500 text-center">
+              We'll reply within 24h
+            </p>
+          </form>
 
           {/* Map and Contact Info */}
-          <div className="space-y-6">
+          <div className="space-y-8">
+            {/* Map */}
             <div>
-              <h3 className="text-2xl font-bold mb-4">
-                Partner Cities in Nepal
-              </h3>
+              <h3 className="text-2xl font-bold mb-4">Partner Cities in Nepal</h3>
               <div className="relative h-64 bg-gray-200 rounded-lg overflow-hidden">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.27776841053!2d85.29111107910156!3d27.70903099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu%2044600%2C%20Nepal!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
@@ -150,38 +147,29 @@ export function ContactSection() {
               </div>
             </div>
 
+            {/* Contact Info */}
             <div className="space-y-4">
               <h4 className="font-bold text-lg">Contact Information</h4>
 
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-orange-500 mt-1" />
-                <div>
-                  <p className="text-gray-600">hello@example.com</p>
-                </div>
+                <p className="text-gray-600">hello@example.com</p>
               </div>
 
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-orange-500 mt-1" />
-                <div>
-                  <p className="text-gray-600">Lalitpur, Nepal</p>
-                </div>
+                <p className="text-gray-600">Lalitpur, Nepal</p>
               </div>
 
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-orange-500 mt-1" />
-                <div>
-                  <p className="text-gray-600">555-8888888</p>
-                </div>
+                <p className="text-gray-600">555-8888888</p>
               </div>
 
-              <div className="pt-4 border-t">
-                <p className="text-sm text-gray-500">
-                  <span className="text-orange-500 font-medium">
-                    Privacy Note:
-                  </span>{" "}
-                  Your data is safe and used only for collaboration purposes.
-                </p>
-              </div>
+              <p className="text-sm text-gray-500 pt-4 border-t">
+                <span className="text-orange-500 font-medium">Privacy Note:</span>{" "}
+                Your data is safe and used only for collaboration purposes.
+              </p>
             </div>
           </div>
         </div>

@@ -36,7 +36,7 @@ export function CityHeroSection() {
           <div className="relative lg:absolute lg:right-0 lg:top-0 lg:w-1/2 lg:h-full">
             <div className="relative h-[400px] lg:h-full">
               <img
-                src="/futuristic-modern-stadium-architecture-with-orange.jpg"
+                src="images/futuristic-modern-stadium-architecture-with-orange.jpg"
                 alt="Futuristic Innovation Hub"
                 className="w-full h-full object-cover rounded-2xl lg:rounded-none lg:rounded-l-3xl"
               />
@@ -44,12 +44,6 @@ export function CityHeroSection() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
-        {[...Array(8)].map((_, i) => (
-          <div key={i} className={`w-2 h-2 rounded-full ${i === 0 ? "bg-orange-500" : "bg-gray-300"}`} />
-        ))}
       </div>
     </section>
   )
