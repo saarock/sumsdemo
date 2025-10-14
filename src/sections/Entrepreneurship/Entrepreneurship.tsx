@@ -7,7 +7,7 @@ const Entrepreneurship = () => {
   return (
     <>
       {/* Entrepreneurship Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-r from-orange-50 to-red-50">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-r bg-gradient-to-r from-gray-50 to-orange-50">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
             {/* Left Image */}
