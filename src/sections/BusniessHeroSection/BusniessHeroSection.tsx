@@ -6,10 +6,7 @@ const BusinessHeroSection = () => {
     <>
       {/* Business Hero Section */}
       <section
-        className="relative flex 
-        flex-col lg:flex-row items-center min-h-[500px] 
-        lg:min-h-[650px] px-4 sm:px-6 py-8 lg:py-0 bg-center 
-        bg-no-repeat bg-cover justify-center"
+        className="relative flex flex-col lg:flex-row items-center justify-center min-h-screen px-4 sm:px-6 py-8 lg:py-0 bg-center bg-no-repeat bg-cover  "
         style={{ backgroundImage: `url(/images/business.jpg)` }}
       >
         {/* Dark Overlay */}

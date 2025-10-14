@@ -1,50 +1,61 @@
-// import { Button } from "@/components/ui/button"
-import { ArrowDown } from "lucide-react"
-import { Button } from "../../components"
 
-export function CityHeroSection() {
+import { Button } from "../../components";
+
+export const CityHeroSection = () => {
   return (
-    <section className="relative min-h-[600px] lg:min-h-[700px] overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
-      <div className="container mx-auto px-4 py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-8 z-10">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-orange-500/10">
-              <ArrowDown className="w-6 h-6 text-orange-500" />
-            </div>
+    <section
+      className="relative flex flex-col lg:flex-row items-center justify-center min-h-screen px-4 sm:px-6 py-8 lg:py-0 bg-center bg-no-repeat bg-cover"
+      style={{ backgroundImage: `url(/images/futuristic-modern-stadium-architecture-with-orange.jpg)` }}
+    >
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px]"></div>
 
-            <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-balance">
-              Transform Your City Into an Innovation Hub
-            </h1>
+      {/* Left Content */}
+      <div className="flex-1 lg:ml-8 max-w-2xl text-center lg:text-left mb-8 lg:mb-0 relative z-10">
+        <div className="inline-block px-3 sm:px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6">
+          🌆 Empowering Cities
+        </div>
 
-            <div className="space-y-2">
-              <p className="text-lg lg:text-xl text-muted-foreground">Retain talented people, jobs.</p>
-              <p className="text-lg lg:text-xl text-muted-foreground">Solve local challenges.</p>
-            </div>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6 drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]">
+          <span className="text-orange-500">Transform Your City</span>
+          <br />
+          <span className="text-orange-500">Into an Innovation Hub</span>
+        </h1>
 
-            <div className="flex flex-wrap gap-4">
-              <Button  className="bg-black hover:bg-black/90 text-white px-8">
-                See How It Works
-              </Button>
-              <Button  className="bg-orange-500 hover:bg-orange-600 text-white px-8">
-                Contact Us
-              </Button>
-            </div>
-          </div>
+        <p className="text-gray-100 text-base sm:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-8 max-w-lg mx-auto lg:mx-0 drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">
+          Retain talent, create jobs, and solve local challenges with innovation-driven
+          initiatives powered by collaboration and smart solutions.
+        </p>
 
-          {/* Right Image */}
-          <div className="relative lg:absolute lg:right-0 lg:top-0 lg:w-1/2 lg:h-full">
-            <div className="relative h-[400px] lg:h-full">
-              <img
-                src="images/futuristic-modern-stadium-architecture-with-orange.jpg"
-                alt="Futuristic Innovation Hub"
-                className="w-full h-full object-cover rounded-2xl lg:rounded-none lg:rounded-l-3xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent to-gray-50/50 lg:to-gray-50/80" />
-            </div>
-          </div>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+          <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
+            See How It Works
+          </Button>
+          <Button className="bg-gradient-to-r from-black to-gray-800 hover:from-gray-900 hover:to-black text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
+            Contact Us
+          </Button>
+        </div>
+      </div>
+
+      {/* Right Visual Section */}
+      <div className="flex-1 w-full max-w-lg lg:max-w-[600px] mx-auto lg:mx-0 relative z-10">
+        <div className="relative rounded-2xl shadow-2xl overflow-hidden">
+          {/* Base Image (optional — you can replace or keep it same as background) */}
+          {/* <img
+            src="/images/futuristic-modern-stadium-architecture-with-orange.jpg"
+            alt="City Innovation Hub"
+            className="w-full h-[300px] sm:h-[400px] lg:h-[600px] object-cover transition-transform duration-500 hover:scale-105"
+          /> */}
+
+          {/* Floating Stat Example (optional, can be enabled later) */}
+          {/* <div className="absolute top-4 sm:top-8 right-4 sm:right-8 bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-lg border border-white/30">
+            <div className="text-lg sm:text-2xl font-bold text-orange-500">50+</div>
+            <div className="text-xs sm:text-sm text-gray-600">Cities Connected</div>
+          </div> */}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
+
+

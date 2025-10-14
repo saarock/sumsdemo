@@ -1,4 +1,4 @@
-import React from "react";
+
 import { CityHeroSection } from "../../sections/CityHeroSection/CityHeroSection";
 import { ProblemsSection } from "../../sections/ProblemsSection/ProblemsSection";
 import { SolutionsSection } from "../../sections/SolutionsSection/SolutionsSection";
