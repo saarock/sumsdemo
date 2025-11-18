@@ -11,8 +11,7 @@ const WhoCanJoin = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-black">Who Can Join</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              SUMS Nepal welcomes diverse organizations to create a thriving ecosystem of collaboration and innovation
-              in Nepal.
+              SUMS welcomes diverse organizations to create a thriving ecosystem of collaboration and innovation.
             </p>
           </div>
 

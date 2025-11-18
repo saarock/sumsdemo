@@ -23,7 +23,7 @@ const content = {
     "Receiving feedback and reinforcement from peers and instructors, and developing critical thinking and problem-solving skills through group activities and discussions.",
     "With a team of 50+ Social Cognitive Experts from Nepal and academia's foremost authorities, we bring the best of both worlds to our students.",
   ],
-  buttonText: "GET CURRICULUM",
+  buttonText: "Stay in touch",
 };
 
 const AcademiaGrow = () => {

@@ -61,9 +61,9 @@ const HowWeSupport = () => {
                   <p className="text-gray-600 mb-6 text-sm">
                     {support.details}
                   </p>
-                  <Button className="w-full group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300 border-orange-200 text-orange-600 bg-transparent border">
+                  {/* <Button className="w-full group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300 border-orange-200 text-orange-600 bg-transparent border">
                     Try Method
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             ))}

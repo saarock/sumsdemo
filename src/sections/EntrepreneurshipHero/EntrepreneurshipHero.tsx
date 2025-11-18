@@ -29,7 +29,7 @@ const EntrepreneurshipHero = () => {
           </h1>
 
           <p className="text-gray-100 text-base sm:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-8 max-w-lg mx-auto lg:mx-0 drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">
-            Acceleration program designed to turn startup dreams into thriving
+            Incubation program designed to turn startup dreams into thriving
             businesses.
           </p>
 
@@ -51,7 +51,7 @@ const EntrepreneurshipHero = () => {
             />
 
             {/* Overlay Card */}
-            <div className="absolute bottom-6 left-6 bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border border-white/30 max-w-[280px]">
+            {/* <div className="absolute bottom-6 left-6 bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border border-white/30 max-w-[280px]">
               <div className="aspect-video bg-orange-50 rounded-lg flex items-center justify-center mb-4">
                 <div className="text-center space-y-2">
                   <Rocket className="w-12 h-12 text-orange-500 mx-auto" />
@@ -69,12 +69,12 @@ const EntrepreneurshipHero = () => {
                   <p className="text-sm text-gray-600">500+ startups launched</p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Floating Stat */}
             <div className="absolute top-4 sm:top-8 right-4 sm:right-8 bg-white/80 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-lg border border-white/30">
               <div className="text-lg sm:text-2xl font-bold text-orange-500">
-                500+
+                100+
               </div>
               <div className="text-xs sm:text-sm text-gray-600">
                 Startups Accelerated

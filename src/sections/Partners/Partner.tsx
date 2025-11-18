@@ -6,7 +6,7 @@ const Partner = () => {
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
           <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-            They Trust Us
+            They <span className="text-orange-500">Trust</span> Us
           </span>
         </h2>
         <p className="text-gray-600 mb-8">

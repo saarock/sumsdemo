@@ -49,7 +49,7 @@ const PartnershipBenefits = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-              Strategic Partnership Benefits
+              Strategic <span className="text-orange-500">Partnership </span>Benefits
             </span>
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">

@@ -24,7 +24,7 @@ export default function AcademicsPage() {
     <main className="min-h-screen bg-white">
       <AcademiaHero />
       <Partner />
-      <AcademiaInAction />
+      {/* <AcademiaInAction /> */}
       <PartnershipBenefits />
       <OutcomesSection/>
       <GrowthFlywheel/>

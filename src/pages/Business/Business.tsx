@@ -28,7 +28,7 @@ export default function CollaborationPlatform() {
       <HowWeSupport />
       <OurProcess />
       <PostYourOffer />
-      <CTASection />
+      {/* <CTASection /> */}
       {/* </div> */}
     </main>
   );

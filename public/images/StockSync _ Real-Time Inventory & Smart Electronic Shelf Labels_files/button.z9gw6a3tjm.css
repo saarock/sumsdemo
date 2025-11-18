@@ -1,0 +1,132 @@
+﻿/* Solid Primary Button */
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: #fff;
+}
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.focus,
+    .btn-primary.active,
+    .show > .btn-primary.dropdown-toggle {
+        background-color: var(--bs-primary-dark) !important;
+        border-color: var(--bs-primary-dark) !important;
+        box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.5) !important; /* Adjust the alpha for intensity */
+        color: #fff !important;
+        outline: none !important;
+    }
+
+    .btn-primary:disabled,
+    .btn-primary.disabled {
+        background-color: var(--bs-primary);
+        border-color: var(--bs-primary);
+        opacity: 0.65;
+    }
+
+/* Outline Primary Button */
+.btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    background-color: transparent;
+}
+
+    .btn-outline-primary:hover,
+    .btn-outline-primary:focus,
+    .btn-outline-primary:active,
+    .btn-outline-primary.focus,
+    .btn-outline-primary.active,
+    .show > .btn-outline-primary.dropdown-toggle {
+        color: #fff !important;
+        background-color: var(--bs-primary) !important;
+        border-color: var(--bs-primary) !important;
+        box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.5) !important;
+        outline: none !important;
+    }
+
+    .btn-outline-primary:disabled,
+    .btn-outline-primary.disabled {
+        color: var(--bs-primary);
+        background-color: transparent;
+        opacity: 0.65;
+    }
+
+/* Shared button styles */
+.btn {
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+    .btn::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        transform: scale(10, 10);
+        opacity: 0;
+        transition: transform .5s, opacity 1s;
+    }
+
+    .btn:active::after {
+        transform: scale(0, 0);
+        opacity: 0.2;
+        transition: 0s;
+    }
+
+    /* Remove default focus outlines for consistency */
+    .btn:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.5) !important;
+    }
+
+    .btn:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.5) !important;
+    }
+
+/* ---------- Chip Buttons ---------- */
+.btn-chip {
+    /* pill shape */
+    border-radius: 50rem !important; /* fully-rounded */
+    padding: .35rem .9rem !important; /* a bit tighter */
+    font-size: .875rem; /* 14 px-ish */
+    font-weight: 500;
+    line-height: 1;
+    margin: .25rem; /* gap between chips */
+    border-width: 1px;
+    transition: all .15s ease-in-out;
+}
+
+    /* muted (un-checked) state uses a very light fill instead of pure white */
+    .btn-chip.btn-outline-danger,
+    .btn-chip.btn-outline-warning,
+    .btn-chip.btn-outline-success,
+    .btn-chip.btn-outline-info,
+    .btn-chip.btn-outline-secondary {
+        background-color: rgba(var(--bs-light-rgb), .7); /* #f8f9fa @ Bootstrap 5 */
+    }
+
+/* checked (active) state – keep Bootstrap brand colour but kill the outline */
+.btn-check:checked + .btn-chip.btn-outline-danger,
+.btn-check:checked + .btn-chip.btn-outline-warning,
+.btn-check:checked + .btn-chip.btn-outline-success,
+.btn-check:checked + .btn-chip.btn-outline-info,
+.btn-check:checked + .btn-chip.btn-outline-secondary {
+    color: #fff !important;
+    background-color: var(--bs-btn-active-bg, currentColor) !important;
+    border-color: transparent !important;
+}
+
+/* keyboard focus ring still visible */
+.btn-chip:focus-visible {
+    box-shadow: 0 0 0 .2rem rgba(var(--bs-primary-rgb), .5);
+}
+

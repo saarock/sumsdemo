@@ -4,14 +4,14 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "../../components";
 
 const heroData = {
-  tagline: "🎓 Powering Education in Nepal",
+  // tagline: "🎓 Powering Education in Nepal",
   title: [
     { text: "SUMS:", gradient: null },
     { text: "Powering", gradient: "from-orange-500 to-orange-600" },
     { text: "Education", gradient: "from-gray-100 to-gray-300" },
   ],
   description: [
-    "SUMS Nepal is an integrated technology service platform designed to power the next generation of education in Nepal.",
+    "SUMS is an integrated technology service platform designed to power the next generation of education.",
     "By combining essential academic and administrative tools into one user-friendly system, SUMS addresses core challenges faced by Higher Education Institutions and prepares students for the demands of the global market.",
   ],
   highlight:
@@ -31,9 +31,9 @@ export default function AcademiaHero() {
 
       {/* Left Content */}
       <div className="flex-1 lg:ml-8 max-w-2xl text-center lg:text-left mb-8 lg:mb-0 relative z-10">
-        <div className="inline-block px-3 sm:px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6">
+        {/* <div className="inline-block px-3 sm:px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6">
           {heroData.tagline}
-        </div>
+        </div> */}
 
         <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6 drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]">
           {heroData.title.map((part, index) => (
@@ -47,7 +47,8 @@ export default function AcademiaHero() {
               ) : (
                 part.text
               )}
-              <br />
+              {" "}
+              {/* <br /> */}
             </React.Fragment>
           ))}
         </h1>
@@ -75,11 +76,11 @@ export default function AcademiaHero() {
       <div className="flex-1 w-full max-w-lg lg:max-w-[600px] mx-auto lg:mx-0 relative z-10">
         <div className="relative rounded-2xl shadow-2xl overflow-hidden">
           {/* Base Image */}
-          {/* <img
+          <img
             src="/images/hero_left.png"
             alt="Education ecosystem"
             className="w-full h-[300px] sm:h-[400px] lg:h-[600px] object-cover transition-transform duration-500 hover:scale-105"
-          /> */}
+          />
         </div>
       </div>
     </section>

@@ -29,9 +29,9 @@ const ProjectHero = () => {
               <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
             </Button>
 
-            <Button className="border-2 border-orange-500 text-orange-500 hover:bg-orange-50 px-6 sm:px-8 py-3 text-base sm:text-lg transition-all duration-200 bg-transparent w-full sm:w-auto">
+            {/* <Button className="border-2 border-orange-500 text-orange-500 hover:bg-orange-50 px-6 sm:px-8 py-3 text-base sm:text-lg transition-all duration-200 bg-transparent w-full sm:w-auto">
               Learn More
-            </Button>
+            </Button> */}
           </div>
         </div>
 

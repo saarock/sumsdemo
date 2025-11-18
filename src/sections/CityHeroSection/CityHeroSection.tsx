@@ -5,7 +5,7 @@ export const CityHeroSection = () => {
   return (
     <section
       className="relative flex flex-col lg:flex-row items-center justify-center min-h-screen px-4 sm:px-6 py-8 lg:py-0 bg-center bg-no-repeat bg-cover"
-      style={{ backgroundImage: `url(/images/futuristic-modern-stadium-architecture-with-orange.jpg)` }}
+      style={{ backgroundImage: `url(/images/city.jpg)` }}
     >
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px]"></div>
@@ -31,7 +31,7 @@ export const CityHeroSection = () => {
           <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
             See How It Works
           </Button>
-          <Button className="bg-gradient-to-r from-black to-gray-800 hover:from-gray-900 hover:to-black text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
+          <Button className="bg-gradient-to-r from-black to-gray-900 hover:from-gray-900 hover:to-black text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
             Contact Us
           </Button>
         </div>

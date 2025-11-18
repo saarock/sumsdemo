@@ -43,7 +43,7 @@ const GrowthFlywheel = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-              Academic Institutional Growth Flywheel
+              Academic <span className="text-orange-500">Institutional Growth</span> Flywheel
             </span>
           </h2>
         </div>
@@ -52,7 +52,7 @@ const GrowthFlywheel = () => {
           {/* Left side - Text content */}
           <div className="space-y-6">
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
-              Partnering with SUMS Nepal
+              Partnering with SUMS
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed">
               Initiates a powerful, self-reinforcing cycle of institutional growth.

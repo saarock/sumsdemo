@@ -1,0 +1,195 @@
+﻿/* First, import Montserrat from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    /* Typography - Set Montserrat as primary font */
+    --bs-font-sans-serif: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --bs-font-serif: Georgia, "Times New Roman", serif;
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    /* Custom Fonts */
+    --bs-font-primary: "Montserrat", var(--bs-font-sans-serif);
+    --bs-font-heading: "Montserrat", var(--bs-font-sans-serif);
+    /* Font Weights - Matching Montserrat available weights */
+    --bs-font-weight-lighter: 300; /* Light */
+    --bs-font-weight-light: 300;
+    --bs-font-weight-normal: 400; /* Regular */
+    --bs-font-weight-medium: 500;
+    --bs-font-weight-semibold: 600;
+    --bs-font-weight-bold: 700; /* Bold */
+    --bs-font-weight-bolder: 800; /* Extra Bold */
+    /* Font Sizes */
+    --bs-root-font-size: 16px;
+    --bs-font-size-base: 1rem;
+    --bs-font-size-sm: 0.875rem;
+    --bs-font-size-lg: 1.25rem;
+    --bs-font-size-xs: 0.75rem;
+    --bs-font-size-xl: 1.5rem;
+    /* Heading Sizes - Adjusted for Montserrat */
+    --bs-h1-font-size: 2.5rem;
+    --bs-h2-font-size: 2rem;
+    --bs-h3-font-size: 1.75rem;
+    --bs-h4-font-size: 1.5rem;
+    --bs-h5-font-size: 1.25rem;
+    --bs-h6-font-size: 1rem;
+    /* Line Heights - Adjusted for Montserrat */
+    --bs-line-height-base: 1.6; /* Slightly increased for better readability */
+    --bs-line-height-sm: 1.3;
+    --bs-line-height-lg: 2;
+    /* Letter Spacing - Montserrat specific */
+    --bs-letter-spacing-tight: -0.01em;
+    --bs-letter-spacing-normal: 0;
+    --bs-letter-spacing-wide: 0.02em;
+    /* Primary green shades */
+    --bs-primary: #2E7D32;
+    --bs-primary-rgb: 46, 125, 50;
+    --bs-primary-dark: #1B5E20;
+    --bs-primary-light: #4CAF50;
+    --bs-primary-subtle: #E8F5E9;
+    --bs-primary-bg-subtle: #C8E6C9;
+    --bs-primary-border-subtle: #A5D6A7;
+    --bs-primary-hover: #266A2B;
+    --bs-primary-active: #1F5524;
+    /* Secondary shades */
+    --bs-secondary: #78909C;
+    --bs-secondary-rgb: 120, 144, 156;
+    --bs-secondary-dark: #546E7A;
+    --bs-secondary-light: #90A4AE;
+    --bs-secondary-subtle: #ECEFF1;
+    --bs-secondary-bg-subtle: #CFD8DC;
+    --bs-secondary-border-subtle: #B0BEC5;
+    --bs-secondary-hover: #687F8C;
+    --bs-secondary-active: #596D78;
+    /* Success shades */
+    --bs-success: #43A047;
+    --bs-success-rgb: 67, 160, 71;
+    --bs-success-dark: #2E7D32;
+    --bs-success-light: #66BB6A;
+    --bs-success-subtle: #E8F5E9;
+    --bs-success-bg-subtle: #C8E6C9;
+    --bs-success-border-subtle: #A5D6A7;
+    --bs-success-hover: #39893C;
+    --bs-success-active: #307A33;
+    /* Info shades */
+    --bs-info: #26A69A;
+    --bs-info-rgb: 38, 166, 154;
+    --bs-info-dark: #00897B;
+    --bs-info-light: #4DB6AC;
+    --bs-info-subtle: #E0F2F1;
+    --bs-info-bg-subtle: #B2DFDB;
+    --bs-info-border-subtle: #80CBC4;
+    --bs-info-hover: #208F84;
+    --bs-info-active: #1B7B72;
+    /* Warning shades */
+    --bs-warning: #FFA000;
+    --bs-warning-rgb: 255, 160, 0;
+    --bs-warning-dark: #FF8F00;
+    --bs-warning-light: #FFB300;
+    --bs-warning-subtle: #FFF3E0;
+    --bs-warning-bg-subtle: #FFE0B2;
+    --bs-warning-border-subtle: #FFCC80;
+    --bs-warning-hover: #E69100;
+    --bs-warning-active: #CC8100;
+    /* Danger shades */
+    --bs-danger: #E53935;
+    --bs-danger-rgb: 229, 57, 53;
+    --bs-danger-dark: #C62828;
+    --bs-danger-light: #EF5350;
+    --bs-danger-subtle: #FFEBEE;
+    --bs-danger-bg-subtle: #FFCDD2;
+    --bs-danger-border-subtle: #EF9A9A;
+    --bs-danger-hover: #D32F2F;
+    --bs-danger-active: #B71C1C;
+    /* Background and surface colors */
+    --bs-body-bg: #FFFFFF;
+    --bs-body-color: #212121;
+    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-body-color-rgb: 33, 33, 33;
+    --bs-light: #FAFFF8;
+    --bs-light-rgb: 250, 255, 248;
+    --bs-dark: #272727;
+    --bs-dark-rgb: 39, 39, 39;
+    /* Additional utility colors */
+    --bs-gray-100: #F5F5F5;
+    --bs-gray-200: #EEEEEE;
+    --bs-gray-300: #E0E0E0;
+    --bs-gray-400: #BDBDBD;
+    --bs-gray-500: #9E9E9E;
+    --bs-gray-600: #757575;
+    --bs-gray-700: #616161;
+    --bs-gray-800: #424242;
+    --bs-gray-900: #212121;
+    /* Border and shadow utilities */
+    --bs-border-color: #DEE2E6;
+    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --bs-border-width: 1px;
+    --bs-border-radius: 0.375rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.5rem;
+    --bs-border-radius-xl: 1rem;
+    /* Focus state */
+    --bs-focus-ring-width: 0.25rem;
+    --bs-focus-ring-opacity: 0.25;
+    --bs-focus-ring-color: rgba(46, 125, 50, 0.25);
+}
+
+/* Navbar customization */
+.navbar-dark {
+    background-color: var(--bs-primary-dark);
+}
+
+.navbar-light {
+    background-color: var(--bs-light);
+}
+
+/* Card customization */
+.card-header {
+    background-color: var(--bs-light);
+}
+
+/* Form elements */
+.form-control:focus {
+    border-color: var(--bs-primary-light);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Links */
+a {
+    color: var(--bs-primary);
+}
+
+    a:hover {
+        color: var(--bs-primary-dark);
+    }
+
+/* List groups */
+.list-group-item.active {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+/* Pagination */
+.page-link {
+    color: var(--bs-primary);
+}
+
+.page-item.active .page-link {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+/* Progress bars */
+.progress-bar {
+    background-color: var(--bs-primary);
+}
+
+/* Alerts */
+.alert-primary {
+    background-color: var(--bs-light);
+    border-color: var(--bs-primary-light);
+    color: var(--bs-primary-dark);
+}
+
+/* Badges */
+.badge.bg-primary {
+    background-color: var(--bs-primary) !important;
+}

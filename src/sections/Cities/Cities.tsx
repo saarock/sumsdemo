@@ -3,9 +3,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 
 const Cities = () => {
   const benefits = [
-    "Traffic, waste, governance solutions",
-    "Youth solve real issues",
-    "Cost-effective pilots",
+   
     "Culture of innovation & entrepreneurship",
     "Local talent for local jobs",
     "Increased employment & sustainable growth",

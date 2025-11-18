@@ -15,7 +15,7 @@ const OutcomesSection = () => {
           </span>
         </h2>
         <p className="text-2xl sm:text-3xl font-bold mb-12">
-          <span className="bg-gradient-to-r from-teal-500 to-green-500 bg-clip-text text-transparent">
+          <span className="text-orange-500">
             Make your Progress
           </span>
         </p>

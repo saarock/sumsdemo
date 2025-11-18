@@ -20,7 +20,7 @@ export default function Entrepreneurship() {
      <EntrepreneurshipHero/>
      <UltimateLaunchpad/>
      <OurProcess/>
-     <StartupIdeaGenerator/>
+     {/* <StartupIdeaGenerator/> */}
      <StudentSuccessStories/>
      <CTASection/>
     </main>
