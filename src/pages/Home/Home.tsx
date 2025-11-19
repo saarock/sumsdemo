@@ -27,8 +27,8 @@ const Home = () => {
         <Entrepreneurship />
         <HowItWorks />
         {/* <AssessAndAlignDetailed/> */}
-        <UpcomingEvents/>
-        <PlatformShowcase/>
+        {/* <UpcomingEvents/> */}
+        {/* <PlatformShowcase/> */}
       </main>
     </>
   );

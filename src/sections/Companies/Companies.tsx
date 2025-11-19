@@ -1,5 +1,6 @@
 import { ArrowRight, Clock, Target, Users } from "lucide-react";
 import { Button } from "../../components";
+import { Link } from "react-router-dom";
 
 const Companies = () => {
   return (
@@ -56,10 +57,12 @@ const Companies = () => {
               </div>
 
               {/* Call to Action Button */}
+              <Link to={'/business'}>
               <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
                 Hire Talent
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
               </Button>
+              </Link>
             </div>
           </div>
         </div>

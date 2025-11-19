@@ -15,8 +15,8 @@ const City = () => {
         <CityHeroSection />
         <ProblemsSection />
         <SolutionsSection />
-        <FeaturedProjectsSection />
-        <CityRoleSection />
+        {/* <FeaturedProjectsSection /> */}
+        {/* <CityRoleSection /> */}
         <CityPartnershipSection />
         <GetInvolvedSection />
         <ContactSection />

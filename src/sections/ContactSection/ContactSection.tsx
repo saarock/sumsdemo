@@ -153,7 +153,7 @@ export function ContactSection() {
 
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-orange-500 mt-1" />
-                <p className="text-gray-600">hello@example.com</p>
+                <p className="text-gray-600">info@sumsnepal.com</p>
               </div>
 
               <div className="flex items-start gap-3">
@@ -163,7 +163,7 @@ export function ContactSection() {
 
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-orange-500 mt-1" />
-                <p className="text-gray-600">555-8888888</p>
+                <p className="text-gray-600">9810446594</p>
               </div>
 
               <p className="text-sm text-gray-500 pt-4 border-t">

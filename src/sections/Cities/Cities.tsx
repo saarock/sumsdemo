@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
 import { Button } from "../../components";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 const Cities = () => {
   const benefits = [
-   
     "Culture of innovation & entrepreneurship",
     "Local talent for local jobs",
     "Increased employment & sustainable growth",
@@ -40,16 +40,20 @@ const Cities = () => {
                     key={index}
                   >
                     <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-orange-500 flex-shrink-0" />
-                    <span className="text-gray-800 text-base sm:text-lg">{benefit}</span>
+                    <span className="text-gray-800 text-base sm:text-lg">
+                      {benefit}
+                    </span>
                   </div>
                 ))}
               </div>
 
               {/* Build Your City Button */}
-              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
-                Build Your City
-                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
-              </Button>
+              <Link to={"/city"}>
+                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
+                  Build Your City
+                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+                </Button>
+              </Link>
             </div>
 
             {/* Right Image */}

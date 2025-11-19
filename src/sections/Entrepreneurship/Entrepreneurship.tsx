@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../../components";
 import { entrepreneurshipData } from "./EntrepreneurshipData";
 
@@ -62,11 +63,15 @@ const Entrepreneurship = () => {
                 </p>
               </div>
 
+              <Link to={"/entrepreneurship"}>
               {/* CTA Button */}
               <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
                 {entrepreneurshipData.cta.text}
                 <entrepreneurshipData.cta.icon className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
-              </Button>
+              </Button>      
+              </Link>
+
+        
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Button } from "../../components";
 import {
   Briefcase,
@@ -10,6 +10,7 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 type Feature = {
   id: string;
@@ -50,7 +51,7 @@ const features: Feature[] = [
         ),
       },
     ],
-    buttonText: "View Live Projects",
+    buttonText: "Apply",
   },
   {
     id: "startup-spark",
@@ -117,7 +118,7 @@ const features: Feature[] = [
         icon: <TrendingUp className="w-5 h-5 text-orange-500 flex-shrink-0" />,
       },
     ],
-    buttonText: "Find Internships",
+    buttonText: "Comming soon...",
   },
   {
     id: "skill-scanner",
@@ -136,6 +137,16 @@ const features: Feature[] = [
 ];
 
 const StudentMainFeatures = () => {
+
+  const navigate = useNavigate();
+
+  const actOnAction = useCallback((btnInnerText: string) => {
+    if (btnInnerText === "Start Your Startup") {
+      navigate("/entrepreneurship");
+
+    }
+  }, []);
+
   return (
     <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-r from-gray-50 to-orange-50">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
@@ -174,12 +185,12 @@ const StudentMainFeatures = () => {
               ))}
             </div>
 
-            {index === features.length - 1 ? (
+            {index === features.length - 1 && index === 2   ? (
               <Button className="bg-gradient-to-r from-orange-400 to-orange-400 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 text-base shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
                 {feature.buttonText}
               </Button>
             ) : (
-              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 text-base shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
+              <Button  onClick={() => actOnAction(feature.buttonText)}  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 text-base shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
                 {feature.buttonText}
               </Button>
             )}

@@ -73,10 +73,10 @@ export function SolutionsSection() {
             <p className="text-lg text-muted-foreground leading-relaxed">
               {activeSolution.description}
             </p>
-
+{/* 
             <Button className="text-orange-500 hover:text-orange-600">
               {activeSolution.cta} →
-            </Button>
+            </Button> */}
           </div>
         )}
       </div>

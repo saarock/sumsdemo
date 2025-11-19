@@ -1,7 +1,29 @@
+import { useCallback } from "react";
 import { stakeholderData } from "./StakeHolderData";
-
+import { useNavigate } from "react-router-dom";
 
 const Stakeholder = () => {
+  const navigate = useNavigate();
+
+  const actOnClick = useCallback((redirectName: string) => {
+    switch (redirectName) {
+      case "Students":
+        navigate("/student");
+        break;
+      case "Colleges":
+        navigate("/academia");
+        break;
+      case "Companies":
+        navigate("business");
+        break;
+      case "Cities":
+        navigate("city");
+        break;
+      default:
+        navigate("/");
+    }
+  }, []);
+
   return (
     <>
       {/* Stakeholder Cards */}
@@ -13,6 +35,7 @@ const Stakeholder = () => {
               <div
                 key={item.id}
                 className="text-center group hover:transform hover:scale-105 transition-all duration-30"
+                onClick={() => actOnClick(item.title)}
               >
                 <div className="bg-white rounded-2xl p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100 h-64">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:rotate-6 transition-transform duration-300">

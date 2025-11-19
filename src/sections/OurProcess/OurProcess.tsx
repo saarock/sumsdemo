@@ -71,11 +71,11 @@ const OurProcess = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12 flex justify-center item-center">
+          {/* <div className="text-center mt-12 flex justify-center item-center">
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full">
               Start Now
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 

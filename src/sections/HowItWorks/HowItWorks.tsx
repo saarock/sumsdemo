@@ -32,7 +32,7 @@ const HowItWorks = () => {
   return (
     <>
       {/* How It Works Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-white">
+      <section className="sm:py-16 lg:py-20 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
             How It Works
@@ -48,11 +48,9 @@ const HowItWorks = () => {
             <div className="hidden lg:block absolute left-0 right-0 h-1.5 bg-gray-200 transform -translate-y-1/2 z-0 top-12">
               <div
                 className="bg-gradient-to-br from-orange-600 to-orange-500 h-1.5 top-0 left-0"
-
                 style={{
                   position: "absolute",
                   borderRadius: "3rem",
-            
 
                   width:
                     currentStateNum === 1
@@ -83,25 +81,13 @@ const HowItWorks = () => {
                     onClick={() => ActOnClick(index + 1)}
                   >
                     <div className="relative mb-4 sm:mb-6">
-                      <div
-                        style={{
-                          zIndex: "9999",
-                          backgroundColor: "white",
-                       
-                        }}
-                        className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 ${`${
-                          index + 1 <= currentStateNum &&
-                          "bg-gradient-to-br from-orange-500 to-orange-600"
-                        }`}`}
-                      >
-                        <Icon
-                          className={`w-8 h-8 sm:w-10 sm:h-10   ${
-                            index + 1 <= currentStateNum
-                              ? "text-white"
-                              : "text-gray-600 "
-                          }`}
-                        />
-                      </div>
+                      <Icon
+                        className={`w-2 h-2 sm:w-10 sm:h-10   ${
+                          index + 1 <= currentStateNum
+                            ? "text-orange-500"
+                            : "text-gray-600 "
+                        }`}
+                      />
 
                       {/* Active Indicator */}
                       {/* {step.active && (
@@ -120,12 +106,13 @@ const HowItWorks = () => {
             </div>
           </div>
         </div>
-      </section>
-      {currentStateNum === 1 && <AssessAndAlignDetailed />}
+           {currentStateNum === 1 && <AssessAndAlignDetailed />}
       {currentStateNum === 2 && <Connext />}
       {currentStateNum === 3 && <Upskill />}
       {currentStateNum === 4 && <Place />}
       {}
+      </section>
+   
     </>
   );
 };

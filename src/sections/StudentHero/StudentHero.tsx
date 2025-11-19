@@ -1,7 +1,15 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUp } from "lucide-react";
 import { Button } from "../../components";
+import { useCallback } from "react";
 
 const StudentHero = () => {
+  const GotoDownSection = useCallback(() => {
+    window.scrollBy({
+      top: 700,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <section
       className="relative flex flex-col lg:flex-row items-center justify-center min-h-screen px-4 sm:px-6 py-8 lg:py-0 bg-center bg-no-repeat bg-cover"
@@ -26,10 +34,13 @@ const StudentHero = () => {
           your future with our comprehensive career platform.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+        <div
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
+          onClick={GotoDownSection}
+        >
           <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
             START YOUR JOURNEY
-            <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+            🚀
           </Button>
         </div>
       </div>

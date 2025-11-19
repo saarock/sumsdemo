@@ -3,7 +3,7 @@ import { Award, BarChart3, FileText, FlaskConical, Monitor, Users } from "lucide
 export const whatYouGetData = [
   {
     title: "Digital Learning Tool",
-    subtitle: "COGENT",
+    subtitle: "COGKNIT",
     description:
       "Advanced digital platform for interactive learning experiences with modern educational tools and resources.",
     icon: <Monitor className="w-8 h-8 text-white" />,

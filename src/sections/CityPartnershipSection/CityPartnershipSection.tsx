@@ -35,7 +35,7 @@ export function CityPartnershipSection() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16">How We Partner</h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-4 gap-12 max-w-6xl mx-auto">
           {steps.map((step) => (
             <div key={step.number} className="space-y-4">
               <div className="flex items-center gap-4">
@@ -52,11 +52,11 @@ export function CityPartnershipSection() {
           ))}
         </div>
 
-        <div className="text-center">
+        {/* <div className="text-center">
           <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8">
             View Case Studies
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   )

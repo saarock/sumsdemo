@@ -30,7 +30,7 @@ export const contacts = [
   {
     id: 1,
     icon: <MapPin className="w-4 h-4 mr-3 text-orange-400 flex-shrink-0" />,
-    text: "ANTA Complex - 3rd Floor Jawalakhel, Lalitpur, Nepal",
+    text: "Opposite to steel tower, Jawalakhel, Lalitpur, Nepal",
   },
   {
     id: 2,
