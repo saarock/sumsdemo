@@ -6,7 +6,7 @@ const useBackToTop = () => {
   useEffect(() => {
     const handleScroll = () => {
 
-      if (window.scrollY > 200 && prevY > window.scrollY) {
+      if (window.scrollY > 200 ) {
         // show button after scrolling 200px
         setShowButton(true);
       } else {

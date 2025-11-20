@@ -1,4 +1,3 @@
-"use client";
 
 import React, { useState } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
@@ -14,10 +13,45 @@ export function ContactSection() {
     message: "",
   });
 
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: "" })); // clear error on change
+  };
+
+  const validate = () => {
+    const newErrors: { [key: string]: string } = {};
+    if (!formData.name.trim()) newErrors.name = "Name is required";
+    if (!formData.role) newErrors.role = "Role is required";
+    if (!formData.city.trim()) newErrors.city = "City is required";
+    if (!formData.email.trim()) newErrors.email = "Email is required";
+    if (!formData.partnerInterest) newErrors.partnerInterest = "Project type is required";
+    if (!formData.message.trim()) newErrors.message = "Message is required";
+    return newErrors;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("[v0] Form submitted:", formData);
-    alert("Form submitted! We'll contact you soon.");
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return; // stop submission if there are errors
+    }
+
+    const subject = encodeURIComponent(`New City Contact: ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Role: ${formData.role}\n` +
+      `City: ${formData.city}\n` +
+      `Email: ${formData.email}\n` +
+      `Project Type: ${formData.partnerInterest}\n` +
+      `Message: ${formData.message}`
+    );
+
+    // Opens user's default mail client
+    window.location.href = `mailto:info@sumsnepal.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -25,12 +59,8 @@ export function ContactSection() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-3">
-            Let's Build Your City's Future
-          </h2>
-          <p className="text-gray-600">
-            Share your vision, and we'll help make it reality.
-          </p>
+          <h2 className="text-4xl font-bold mb-3">Let's Build Your City's Future</h2>
+          <p className="text-gray-600">Share your vision, and we'll help make it reality.</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -39,83 +69,97 @@ export function ContactSection() {
             onSubmit={handleSubmit}
             className="space-y-6 bg-white p-8 rounded-2xl shadow-lg"
           >
-            <input
-              type="text"
-              placeholder="Name"
-              value={formData.name}
-              onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
-              }
-              required
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 outline-none"
-            />
+            <div>
+              <input
+                name="name"
+                type="text"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
+                className={`w-full border rounded-lg px-4 py-3 focus:ring-2 outline-none ${
+                  errors.name ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-orange-500"
+                }`}
+              />
+              {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+            </div>
 
-            <select
-              value={formData.role}
-              onChange={(e) =>
-                setFormData({ ...formData, role: e.target.value })
-              }
-              required
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 outline-none"
-            >
-              <option value="" disabled>
-                Select your role
-              </option>
-              <option value="city-leader">City Leader</option>
-              <option value="innovator">Innovator</option>
-              <option value="citizen">Citizen</option>
-              <option value="business">Business Owner</option>
-            </select>
+            <div>
+              <select
+                name="role"
+                value={formData.role}
+                onChange={handleChange}
+                className={`w-full border rounded-lg px-4 py-3 focus:ring-2 outline-none ${
+                  errors.role ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-orange-500"
+                }`}
+              >
+                <option value="" disabled>Select your role</option>
+                <option value="city-leader">City Leader</option>
+                <option value="innovator">Innovator</option>
+                <option value="citizen">Citizen</option>
+                <option value="business">Business Owner</option>
+              </select>
+              {errors.role && <p className="text-red-500 text-sm mt-1">{errors.role}</p>}
+            </div>
 
-            <input
-              type="text"
-              placeholder="City"
-              value={formData.city}
-              onChange={(e) =>
-                setFormData({ ...formData, city: e.target.value })
-              }
-              required
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 outline-none"
-            />
+            <div>
+              <input
+                name="city"
+                type="text"
+                placeholder="City"
+                value={formData.city}
+                onChange={handleChange}
+                className={`w-full border rounded-lg px-4 py-3 focus:ring-2 outline-none ${
+                  errors.city ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-orange-500"
+                }`}
+              />
+              {errors.city && <p className="text-red-500 text-sm mt-1">{errors.city}</p>}
+            </div>
 
-            <input
-              type="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
-              }
-              required
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 outline-none"
-            />
+            <div>
+              <input
+                name="email"
+                type="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                className={`w-full border rounded-lg px-4 py-3 focus:ring-2 outline-none ${
+                  errors.email ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-orange-500"
+                }`}
+              />
+              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+            </div>
 
-            <select
-              value={formData.partnerInterest}
-              onChange={(e) =>
-                setFormData({ ...formData, partnerInterest: e.target.value })
-              }
-              required
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 outline-none"
-            >
-              <option value="" disabled>
-                Select project type
-              </option>
-              <option value="smart-mobility">Smart Mobility</option>
-              <option value="green-energy">Green Energy</option>
-              <option value="digital-health">Digital Healthcare</option>
-              <option value="education">Education & Skills</option>
-            </select>
+            <div>
+              <select
+                name="partnerInterest"
+                value={formData.partnerInterest}
+                onChange={handleChange}
+                className={`w-full border rounded-lg px-4 py-3 focus:ring-2 outline-none ${
+                  errors.partnerInterest ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-orange-500"
+                }`}
+              >
+                <option value="" disabled>Select project type</option>
+                <option value="smart-mobility">Smart Mobility</option>
+                <option value="green-energy">Green Energy</option>
+                <option value="digital-health">Digital Healthcare</option>
+                <option value="education">Education & Skills</option>
+              </select>
+              {errors.partnerInterest && <p className="text-red-500 text-sm mt-1">{errors.partnerInterest}</p>}
+            </div>
 
-            <textarea
-              placeholder="Tell us about your city..."
-              value={formData.message}
-              onChange={(e) =>
-                setFormData({ ...formData, message: e.target.value })
-              }
-              rows={5}
-              required
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-orange-500 outline-none resize-none"
-            />
+            <div>
+              <textarea
+                name="message"
+                placeholder="Tell us about your city..."
+                value={formData.message}
+                onChange={handleChange}
+                rows={5}
+                className={`w-full border rounded-lg px-4 py-3 focus:ring-2 outline-none resize-none ${
+                  errors.message ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-orange-500"
+                }`}
+              />
+              {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+            </div>
 
             <Button
               type="submit"
