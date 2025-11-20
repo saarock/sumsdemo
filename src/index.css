@@ -5,11 +5,8 @@ html {
 }
 
 body {
-  font-family: "Titillium Web", sans-serif;
-  /* height: 100rem; */
-  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
 }
-
 
 .scrollTop {
   position: fixed;
@@ -25,3 +22,6 @@ body {
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
+.card {
+  @apply relative border-0 bg-white rounded-3xl shadow-lg hover:shadow-2xl p-8 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105;
+}

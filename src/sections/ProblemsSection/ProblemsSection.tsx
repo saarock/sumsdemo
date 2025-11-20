@@ -26,14 +26,14 @@ export function ProblemsSection() {
     <section className="py-20 lg:py-28 bg-gradient-to-r from-gray-50 to-gray-100">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16 text-gray-900">
-          Why Your City Needs SUMS
+          Why <span className="text-orange-500">Your City </span>Needs SUMS
         </h2>
 
         <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {problems.map((problem) => (
             <div
               key={problem.title}
-              className="group relative border-0 bg-white rounded-3xl shadow-lg hover:shadow-2xl p-8 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
+              className="group card"
             >
               {/* Icon */}
               <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-colors">
@@ -49,7 +49,7 @@ export function ProblemsSection() {
               <p className="text-gray-600 leading-relaxed">{problem.description}</p>
 
               {/* Decorative Bottom Bar */}
-              <div className="absolute bottom-0 left-0 w-12 h-1 rounded-full bg-orange-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              {/* <div className="absolute bottom-0 left-0 w-12 h-1 rounded-full bg-orange-500 opacity-0 group-hover:opacity-100 transition-opacity"></div> */}
             </div>
           ))}
         </div>

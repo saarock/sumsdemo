@@ -104,7 +104,7 @@ const Footer = () => {
         </div>
 
         {/* Google Map */}
-        <div className="w-full h-full overflow-hidden">
+        {/* <div className="w-full h-full overflow-hidden">
           <iframe
             title="SUMS Nepal Live Location"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.123456789012!2d85.3236789!3d27.7172456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199e1234567%3A0xabcdef1234567890!2sSUMS%20Nepal!5e0!3m2!1sen!2snp!4v1692548765432!5m2!1sen!2snp"
@@ -115,7 +115,7 @@ const Footer = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
-        </div>
+        </div> */}
 
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 py-6 px-4 sm:px-6">

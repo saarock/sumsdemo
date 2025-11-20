@@ -4,9 +4,9 @@ const benefitsData = [
   {
     title: "Strengthen Industry-Academia Linkages",
     icon: <Building2 className="w-6 h-6 text-white" />,
-    gradient: "from-blue-500 to-blue-600",
-    borderColor: "border-blue-100",
-    hoverColor: "group-hover:text-blue-600",
+    gradient: "from-orange-500 to-orange-600",
+    borderColor: "border-orange-100",
+    hoverColor: "group-hover:text-orange-600",
     bullets: [
       "More Aligned Placement-Linked Curricula To Embed Industry Practices In Academic Programs",
       "Faculty Exchange With Industry For Practical Exposure",
@@ -17,9 +17,9 @@ const benefitsData = [
   {
     title: "Foster Innovation & Research",
     icon: <Lightbulb className="w-6 h-6 text-white" />,
-    gradient: "from-purple-500 to-purple-600",
-    borderColor: "border-purple-100",
-    hoverColor: "group-hover:text-purple-600",
+    gradient: "from-orange-500 to-orange-600",
+    borderColor: "border-orange-100",
+    hoverColor: "group-hover:text-orange-600",
     bullets: [
       "Transform Academic Institutions Into Hubs Of Innovation And Research",
       "Incubation Centers For Student Startups To Pursue Ideas From Conception To Commercialization",
@@ -49,12 +49,13 @@ const PartnershipBenefits = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-              Strategic <span className="text-orange-500">Partnership </span>Benefits
+              Strategic <span className="text-orange-500">Partnership </span>
+              Benefits
             </span>
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Discover how SUMS transforms academic institutions through
-            strategic partnerships
+            Discover how SUMS transforms academic institutions through strategic
+            partnerships
           </p>
         </div>
 
@@ -63,7 +64,7 @@ const PartnershipBenefits = () => {
           {benefitsData.map((benefit, index) => (
             <div
               key={index}
-              className={`bg-gradient-to-br from-white to-blue-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 ${benefit.borderColor} group`}
+              className="group card"
             >
               <div
                 className={`w-12 h-12 bg-gradient-to-br ${benefit.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300`}
@@ -78,17 +79,7 @@ const PartnershipBenefits = () => {
               <ul className="text-gray-600 text-sm space-y-3">
                 {benefit.bullets.map((bullet, i) => (
                   <li key={i} className="flex items-start">
-                    <span
-                      className={`mr-2 ${
-                        benefit.gradient.includes("blue")
-                          ? "text-blue-500"
-                          : benefit.gradient.includes("purple")
-                          ? "text-purple-500"
-                          : "text-orange-500"
-                      }`}
-                    >
-                      •
-                    </span>
+                    <span className={`mr-2 text-orange-500`}>•</span>
                     {bullet}
                   </li>
                 ))}

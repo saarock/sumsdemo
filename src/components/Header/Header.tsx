@@ -1,85 +1,112 @@
-import { useState } from "react";
-import "./Header.css";
-import Button from "../Button/Button";
-import { navs } from "./navs";
-import LogoImage from "../LogoImage/LogoImage";
-import { Link, NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+
+import { useState, useEffect } from "react"
+import { Menu, X } from "lucide-react"
+import { NavLink } from "react-router-dom"
+import Button from "../Button/Button"
+import LogoImage from "../LogoImage/LogoImage"
+import { navs } from "./navs"
+import "./Header.css"
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 10)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const toggleMenu = () => setIsOpen(!isOpen)
 
   return (
-    <header className="flex items-center justify-between px-6 py-4 bg-white border-b border-gray-100 sticky top-0 z-50">
-      <div className="flex items-center">
-        <LogoImage makeClickable={true} />
-      </div>
+    <header
+      className={` w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/80 backdrop-blur-lg border-b border-orange-100/30 shadow-lg"
+          : "bg-white/50 backdrop-blur-md border-b border-transparent"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
+          {/* Logo */}
+          <div className="flex items-center flex-shrink-0 transition-transform duration-300 hover:scale-105">
+            <LogoImage makeClickable={true} />
+          </div>
 
-      {/* Desktop Nav */}
-      <nav className="hidden md:flex items-center space-x-8">
-        {navs.map((currentNav) => (
-          <NavLink
-            key={currentNav.id}
-            to={currentNav.path}
-            className={({ isActive }) =>
-              `text-gray-600 hover:text-gray-900 ${
-                isActive ? "font-bold text-orange-500" : ""
-              }`
-            }
-          >
-            {currentNav.name}
-          </NavLink>
-        ))}
-      </nav>
-
-      {/* Desktop Button */}
-      <div className="hidden md:block">
-        <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6">
-          Contact Us
-        </Button>
-      </div>
-
-      {/* Mobile Menu Button */}
-      <div className="md:hidden">
-        <button
-          onClick={toggleMenu}
-          className="text-gray-600 hover:text-gray-900"
-        >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-md md:hidden">
-          <nav className="flex flex-col space-y-4 px-6 py-4">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-1">
             {navs.map((currentNav) => (
               <NavLink
                 key={currentNav.id}
                 to={currentNav.path}
-                onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `text-gray-600 hover:text-gray-900 ${
-                    isActive ? "font-bold text-orange-500" : ""
+                  `px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 relative group ${
+                    isActive ? "text-orange-600 bg-orange-50" : "text-gray-700 hover:text-orange-600"
                   }`
                 }
               >
                 {currentNav.name}
+                <span
+                  className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full transition-all duration-300 group-hover:w-full ${({
+                    // @ts-ignore
+                    isActive,
+                  }) => (isActive ? "w-full" : "w-0")}`}
+                />
               </NavLink>
             ))}
-            <Button
-              onClick={() => setIsOpen(false)}
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 w-full"
-            >
+          </nav>
+
+          {/* Desktop Button */}
+          <div className="hidden md:block">
+            <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/30 hover:-translate-y-0.5">
               Contact Us
             </Button>
-          </nav>
-        </div>
-      )}
-    </header>
-  );
-};
+          </div>
 
-export default Header;
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="inline-flex items-center justify-center p-2 rounded-lg text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-all duration-300"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-t border-orange-100/30 shadow-xl animate-in fade-in slide-in-from-top-2">
+            <nav className="flex flex-col space-y-1 px-4 py-4 sm:px-6">
+              {navs.map((currentNav) => (
+                <NavLink
+                  key={currentNav.id}
+                  to={currentNav.path}
+                  onClick={() => setIsOpen(false)}
+                  className={({ isActive }) =>
+                    `px-4 py-3 rounded-lg font-medium text-sm transition-all duration-300 ${
+                      isActive
+                        ? "text-orange-600 bg-orange-50"
+                        : "text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                    }`
+                  }
+                >
+                  {currentNav.name}
+                </NavLink>
+              ))}
+              <Button
+                onClick={() => setIsOpen(false)}
+                className="w-full mt-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-4 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/30"
+              >
+                Contact Us
+              </Button>
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
+  )
+}
+
+export default Header

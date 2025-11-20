@@ -7,28 +7,28 @@ export const whatYouGetData = [
     description:
       "Advanced digital platform for interactive learning experiences with modern educational tools and resources.",
     icon: <Monitor className="w-8 h-8 text-white" />,
-    gradient: "from-gray-800 to-gray-900",
+    gradient: "from-orange-500 to-orange-600",
   },
   {
     title: "Pre-Incubation & Incubation",
     description:
       "Comprehensive startup development programs with mentorship, resources, and structured guidance for innovative ideas.",
     icon: <FileText className="w-8 h-8 text-white" />,
-    gradient: "from-blue-500 to-blue-600",
+    gradient: "from-orange-500 to-orange-600",
   },
   {
     title: "Internships & Job Placement",
     description:
       "Strategic career placement services with industry connections and comprehensive job matching systems.",
     icon: <BarChart3 className="w-8 h-8 text-white" />,
-    gradient: "from-green-500 to-green-600",
+    gradient: "from-orange-500 to-orange-600",
   },
   {
     title: "Workshops & Certification",
     description:
       "Professional development programs with industry-recognized certifications and skill enhancement workshops.",
     icon: <Award className="w-8 h-8 text-white" />,
-    gradient: "from-purple-500 to-purple-600",
+    gradient: "from-orange-500 to-orange-600",
   },
   {
     title: "Research Projects",
@@ -42,6 +42,6 @@ export const whatYouGetData = [
     description:
       "Strategic partnerships with leading companies for real-world project experience and industry exposure.",
     icon: <Users className="w-8 h-8 text-white" />,
-    gradient: "from-teal-500 to-teal-600",
+    gradient: "from-orange-500 to-orange-600",
   },
 ];

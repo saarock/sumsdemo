@@ -33,21 +33,21 @@ const features: Feature[] = [
         title: "Real-World Experience",
         subtitle: "Work on actual business challenges",
         icon: (
-          <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+          <CheckCircle className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
         ),
       },
       {
         title: "Expert Mentorship",
         subtitle: "Get guidance from industry professionals",
         icon: (
-          <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+          <CheckCircle className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
         ),
       },
       {
         title: "Portfolio Building",
         subtitle: "Create impressive project showcases",
         icon: (
-          <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+          <CheckCircle className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
         ),
       },
     ],
@@ -153,7 +153,7 @@ const StudentMainFeatures = () => {
         {features.map((feature, index) => (
           <div
             key={feature.id}
-            className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+            className="card gropu"
           >
             <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
               {feature.icon}

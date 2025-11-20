@@ -10,7 +10,7 @@ const HowWeSupport = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-black">
-              How We Support
+              How <span className='text-orange-500'>We</span> Support
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Comprehensive support services designed to help your organization
@@ -44,7 +44,7 @@ const HowWeSupport = () => {
             ].map((support, index) => (
               <div
                 key={index}
-                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-200 bg-white rounded-lg p-6"
+                className="group card"
               >
                 <div className="pb-4">
                   <div className="w-12 h-12 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">

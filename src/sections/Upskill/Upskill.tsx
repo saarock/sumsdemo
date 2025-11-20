@@ -47,8 +47,8 @@ const Upskill = () => {
             disabled={currentIndex === 0}
             className={`px-4 sm:px-6 py-2 flex items-center ${
               currentIndex === 0
-                ? "text-gray-300 border-gray-200 cursor-not-allowed"
-                : "text-gray-500 border-gray-300 bg-transparent"
+                ? "text-gray-400 border-gray-200 cursor-not-allowed"
+                : "bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white"
             }`}
           >
             <ChevronLeft className="w-4 h-4 mr-2" />
@@ -61,7 +61,7 @@ const Upskill = () => {
             className={`px-4 sm:px-6 py-2 flex items-center ${
               currentIndex + ITEMS_PER_PAGE >= upskillData.length
                 ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                : "bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white"
+                : "bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white"
             }`}
           >
             Next
@@ -78,7 +78,7 @@ const Upskill = () => {
                 key={item.id}
                 className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group hover:transform hover:scale-105 border border-gray-100"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-6 h-6 text-white" />
                 </div>
                 <img

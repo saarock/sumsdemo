@@ -24,7 +24,7 @@ const OutcomesSection = () => {
           {whatYouGetData.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100 group"
+              className="card group"
             >
               <div
                 className={`w-16 h-16 bg-gradient-to-br ${item.gradient} rounded-full flex items-center justify-center mb-6 mx-auto group-hover:rotate-12 transition-transform duration-300`}

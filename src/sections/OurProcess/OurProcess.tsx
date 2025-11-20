@@ -10,7 +10,7 @@ const OurProcess = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-black">
-              Our Process
+              Our <span className='text-orange-500'>Process</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               A streamlined approach to connecting your organization with the
@@ -51,7 +51,7 @@ const OurProcess = () => {
             ].map((process, index) => (
               <div
                 key={index}
-                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-200 bg-white relative rounded-lg p-6"
+                className="group card"
               >
                 <div className="text-center pb-4">
                   <div className="absolute -top-4 left-6 bg-orange-500 text-white text-sm font-bold px-3 py-1 rounded-full">

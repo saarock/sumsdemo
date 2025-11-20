@@ -37,19 +37,19 @@ const Innovation = () => {
               {/* Benefits List */}
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 <div className="flex items-center gap-3 justify-center lg:justify-start">
-                  <Target className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0" />
+                  <Target className="w-5 h-5 sm:w-6 sm:h-6 text-orange-500 flex-shrink-0" />
                   <span className="text-gray-700 text-base sm:text-lg">
                     Engaging resources for training and content.
                   </span>
                 </div>
                 <div className="flex items-center gap-3 justify-center lg:justify-start">
-                  <Users className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0" />
+                  <Users className="w-5 h-5 sm:w-6 sm:h-6 text-orange-500 flex-shrink-0" />
                   <span className="text-gray-700 text-base sm:text-lg">
                     Curriculum-aligned multidisciplinary projects.
                   </span>
                 </div>
                 <div className="flex items-center gap-3 justify-center lg:justify-start">
-                  <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0" />
+                  <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-orange-500 flex-shrink-0" />
                   <span className="text-gray-700 text-base sm:text-lg">
                     A unique approach inspired by Finland's innovation.
                   </span>
