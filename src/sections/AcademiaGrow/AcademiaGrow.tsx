@@ -1,4 +1,5 @@
-import { Button } from "../../components";
+import { useState } from "react";
+import { Button, GeneralForm } from "../../components";
 
 const images = [
   {
@@ -27,6 +28,9 @@ const content = {
 };
 
 const AcademiaGrow = () => {
+
+    const [isOpenGeneralForm, setIsOpenGeneralForm] = useState<boolean>(false);
+  
   return (
     <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-gradient-to-br from-orange-50 via-white to-red-50 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-orange-200/30 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
@@ -74,13 +78,15 @@ const AcademiaGrow = () => {
               ))}
             </div>
 
-            <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
+            <Button onClick={() => setIsOpenGeneralForm(true)} className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
               <span className="relative z-10">{content.buttonText}</span>
               {/* <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 z-" /> */}
             </Button>
           </div>
         </div>
       </div>
+
+      <GeneralForm visible={isOpenGeneralForm} onClose={() => setIsOpenGeneralForm(false)}/>
     </section>
   );
 };
