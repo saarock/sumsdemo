@@ -13,11 +13,12 @@ const PrivacyAndPolicies = () => {
   return (
     <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
       <h1 className="text-5xl font-bold text-center mb-6">
-        Privacy & Policies
+        Privacy <span className="text-orange-500"> & Policies</span>
       </h1>
       <p className="text-center text-gray-600 mb-12 text-lg max-w-3xl mx-auto">
-        Learn how SUMS Nepal protects your personal information and respects your privacy. 
-        All policies are clearly explained to ensure transparency and trust.
+        Learn how SUMS Nepal protects your personal information and respects
+        your privacy. All policies are clearly explained to ensure transparency
+        and trust.
       </p>
 
       <div className="space-y-6">
@@ -26,16 +27,19 @@ const PrivacyAndPolicies = () => {
             key={index}
             className="border border-gray-200 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 relative"
           >
-            {/* Accent bar */}
-            <div className="absolute left-0 top-0 h-full w-1 bg-blue-500 rounded-l-2xl"></div>
-
             <button
               className="w-full text-left px-8 py-5 bg-white hover:bg-blue-50 flex justify-between items-center focus:outline-none relative"
               onClick={() => toggleSection(index)}
             >
-              <span className="font-semibold text-gray-800 text-lg">{section.title}</span>
-              <span className="text-blue-500">
-                {openIndex === index ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+              <span className="font-semibold text-gray-800 text-lg">
+                {section.title}
+              </span>
+              <span className="text-orange-500">
+                {openIndex === index ? (
+                  <ChevronUp size={24} />
+                ) : (
+                  <ChevronDown size={24} />
+                )}
               </span>
             </button>
 
