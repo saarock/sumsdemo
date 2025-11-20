@@ -22,6 +22,18 @@ body {
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
+
 .card {
-  @apply relative border-0 bg-white rounded-3xl shadow-lg hover:shadow-2xl p-8 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105;
+  @apply relative border-0 bg-white rounded-3xl shadow-lg p-8 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl;
+
+  /* Decorative bottom-left line */
+}
+.card::after {
+  content: '';
+  @apply absolute bottom-0 left-0 h-1 w-0 bg-orange-500 transition-all duration-300 rounded-r-full;
+}
+
+/* Show the line on hover */
+.card:hover::after {
+  @apply w-1/2; /* 50% width */
 }

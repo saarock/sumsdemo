@@ -1,5 +1,5 @@
-import React, { useCallback } from "react";
-import { Button } from "../../components";
+import React, { useCallback, useState } from "react";
+import { Button, GeneralForm } from "../../components";
 import {
   Briefcase,
   Building2,
@@ -137,24 +137,26 @@ const features: Feature[] = [
 ];
 
 const StudentMainFeatures = () => {
+  const [isOpenGeneralForm, setIsOpenGeneralForm] = useState<boolean>(false);
 
   const navigate = useNavigate();
 
   const actOnAction = useCallback((btnInnerText: string) => {
     if (btnInnerText === "Start Your Startup") {
       navigate("/entrepreneurship");
+    } else if (btnInnerText === "Apply") {
+        setIsOpenGeneralForm(true);
 
     }
   }, []);
+
+
 
   return (
     <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-r from-gray-50 to-orange-50">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         {features.map((feature, index) => (
-          <div
-            key={feature.id}
-            className="card gropu"
-          >
+          <div key={feature.id} className="card gropu">
             <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
               {feature.icon}
             </div>
@@ -185,18 +187,29 @@ const StudentMainFeatures = () => {
               ))}
             </div>
 
-            {index === features.length - 1 && index === 2   ? (
-              <Button className="bg-gradient-to-r from-orange-400 to-orange-400 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 text-base shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
+            {index === features.length - 1 && index === 2 ? (
+              <Button
+                className="bg-gradient-to-r from-orange-400 to-orange-400 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 text-base shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto"
+              >
                 {feature.buttonText}
               </Button>
             ) : (
-              <Button  onClick={() => actOnAction(feature.buttonText)}  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 text-base shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto">
+              <Button
+                onClick={() => actOnAction(feature.buttonText)}
+                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 text-base shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto"
+              >
                 {feature.buttonText}
               </Button>
             )}
           </div>
         ))}
       </div>
+      {
+        <GeneralForm
+          visible={isOpenGeneralForm}
+          onClose={() => setIsOpenGeneralForm(false)}
+        />
+      }
     </section>
   );
 };

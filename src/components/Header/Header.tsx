@@ -77,7 +77,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-t border-orange-100/30 shadow-xl animate-in fade-in slide-in-from-top-2">
+          <div className="z-50 md:hidden">
             <nav className="flex flex-col space-y-1 px-4 py-4 sm:px-6">
               {navs.map((currentNav) => (
                 <NavLink

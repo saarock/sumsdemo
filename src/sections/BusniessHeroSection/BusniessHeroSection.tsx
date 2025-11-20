@@ -1,9 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Button } from "../../components";
+import { Button, GeneralForm } from "../../components";
 
 const BusinessHero = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isOpenGeneralForm, setIsOpenGeneralForm] = useState<boolean>(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -51,7 +52,7 @@ const BusinessHero = () => {
               together.
             </p>
 
-            <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl hover:shadow-orange-500/25 transition-all duration-300">
+            <Button onClick={() => setIsOpenGeneralForm(true)} className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl hover:shadow-orange-500/25 transition-all duration-300">
               Join Ecosystem
             </Button>
 
@@ -107,6 +108,8 @@ const BusinessHero = () => {
           animation: fadeIn 0.6s ease-out forwards;
         }
       `}</style>
+
+      <GeneralForm visible={isOpenGeneralForm} onClose={() => setIsOpenGeneralForm(false)}/>
     </section>
   );
 };
