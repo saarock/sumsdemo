@@ -1,6 +1,7 @@
 "use client"
 import { contacts, policies, quickLinks, socialLinks, stakeholders } from "./FooterDatas"
 import LogoImage from "../LogoImage/LogoImage"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -74,13 +75,13 @@ const Footer = () => {
                 <ul className="space-y-3 sm:space-y-4">
                   {stakeholders.map((stake, idx) => (
                     <li key={idx}>
-                      <a
-                        href="#"
+                      <Link
+                        to="#"
                         className="text-gray-400 hover:text-orange-400 transition-colors duration-200 flex items-center group text-sm sm:text-base"
                       >
                         <span className="w-0 h-0.5 bg-orange-400 mr-0 group-hover:w-2 group-hover:mr-2 transition-all duration-300"></span>
                         {stake}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -123,14 +124,14 @@ const Footer = () => {
               </div>
               <div className="flex flex-wrap justify-center gap-4 sm:gap-8 text-xs sm:text-sm order-1 sm:order-2">
                 {policies.map((policy, idx) => (
-                  <a
+                  <Link
                     key={idx}
-                    href={policy.toLowerCase()}
+                    to={policy.toLowerCase()}
                     className="text-gray-500 hover:text-orange-400 transition-colors duration-200 relative group"
                   >
                     {policy}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-300"></span>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
