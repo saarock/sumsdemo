@@ -2,37 +2,65 @@ import { useEffect, useState } from "react";
 
 const useBackToTop = () => {
   const [showButton, setShowButton] = useState(false);
-  const [prevY, setPrevY] = useState(0);
+
   useEffect(() => {
     const handleScroll = () => {
-
-      if (window.scrollY > 200 ) {
-        // show button after scrolling 200px
+      if (window.scrollY > 300) {
         setShowButton(true);
       } else {
         setShowButton(false);
       }
-      setPrevY(window.scrollY);
-
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevY]);
+  }, []);
 
   useEffect(() => {
-    let element = document.querySelector(".scrollTop");
+    let button = document.querySelector(".scrollTop") as HTMLElement;
 
-    if (showButton && !element) {
-      element = document.createElement("div");
-      element.classList.add("scrollTop");
-      element.innerHTML = "⬆ Back to Top";
-      (element as HTMLElement).onclick = () =>
+    if (showButton && !button) {
+      button = document.createElement("div");
+      button.classList.add(
+        "scrollTop",
+        "fixed",
+        "bottom-8",
+        "right-8",
+        "w-14",
+        "h-14",
+        "bg-gradient-to-br",
+        "from-orange-400",
+        "to-pink-500",
+        "text-white",
+        "flex",
+        "items-center",
+        "justify-center",
+        "rounded-full",
+        "shadow-2xl",
+        "cursor-pointer",
+        "transition-transform",
+        "duration-300",
+        "hover:scale-110",
+        "hover:shadow-3xl",
+        "opacity-0",
+        "pointer-events-none"
+      );
+      button.innerHTML = "⬆";
+
+      // Add fade-in
+      setTimeout(() => {
+        button!.classList.remove("opacity-0", "pointer-events-none");
+        button!.classList.add("opacity-100");
+      }, 50);
+
+      button.onclick = () =>
         window.scrollTo({ top: 0, behavior: "smooth" });
-      document.body.appendChild(element);
-    } else if (!showButton && element) {
-      element.remove();
+
+      document.body.appendChild(button);
+    } else if (!showButton && button) {
+      // fade-out before removing
+      button.classList.add("opacity-0", "pointer-events-none");
+      setTimeout(() => button?.remove(), 300);
     }
   }, [showButton]);
 };

@@ -24,13 +24,14 @@ body {
 
 
 .card {
-  @apply relative border-0 bg-white rounded-3xl shadow-lg p-8 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl;
+  @apply relative border-0 bg-white rounded-xl shadow-lg p-8 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl;
 
   /* Decorative bottom-left line */
 }
 .card::after {
   content: '';
-  @apply absolute bottom-0 left-0 h-1 w-0 bg-orange-500 transition-all duration-300 rounded-r-full;
+  @apply absolute bottom-0 left-0 h-1 w-0 bg-orange-500 transition-all duration-300 rounded-r-full ;
+   border-bottom-left-radius: 9999px; /* match rounded corner of card */
 }
 
 /* Show the line on hover */

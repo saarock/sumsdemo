@@ -34,7 +34,7 @@ const Stakeholder = () => {
             return (
               <div
                 key={item.id}
-                className="text-center group hover:transform hover:scale-105 transition-all duration-30"
+                className="text-center group hover:transform hover:scale-105 transition-all duration-30 cursor-pointer"
                 onClick={() => actOnClick(item.title)}
               >
                 <div className="bg-white rounded-2xl p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100 h-64">
