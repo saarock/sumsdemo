@@ -28,7 +28,7 @@ const PrivacyAndPolicies = () => {
             className="border border-gray-200 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 relative"
           >
             <button
-              className="w-full text-left px-8 py-5 bg-white hover:bg-blue-50 flex justify-between items-center focus:outline-none relative"
+              className="w-full text-left px-8 py-5 bg-white hover:bg-orange-50 flex justify-between items-center focus:outline-none relative"
               onClick={() => toggleSection(index)}
             >
               <span className="font-semibold text-gray-800 text-lg">
